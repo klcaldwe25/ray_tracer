@@ -69,19 +69,19 @@ include tst/CMakeFiles/ray_chaser_tst.dir/progress.make
 # Include the compile flags for this target's objects.
 include tst/CMakeFiles/ray_chaser_tst.dir/flags.make
 
-tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o: tst/CMakeFiles/ray_chaser_tst.dir/flags.make
-tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Formula-test.cpp
-tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o: tst/CMakeFiles/ray_chaser_tst.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o"
-	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o -MF CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o.d -o CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o -c /Users/kylecaldwell/ray_tracer/tst/Formula-test.cpp
+tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o: tst/CMakeFiles/ray_chaser_tst.dir/flags.make
+tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp
+tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o: tst/CMakeFiles/ray_chaser_tst.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o -MF CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o.d -o CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o -c /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp
 
-tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.i"
-	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kylecaldwell/ray_tracer/tst/Formula-test.cpp > CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.i
+tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.i"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp > CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.i
 
-tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.s"
-	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kylecaldwell/ray_tracer/tst/Formula-test.cpp -o CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.s
+tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.s"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp -o CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.s
 
 tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.o: tst/CMakeFiles/ray_chaser_tst.dir/flags.make
 tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/tst/main.cpp
@@ -99,13 +99,13 @@ tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.s: cmake_force
 
 # Object files for target ray_chaser_tst
 ray_chaser_tst_OBJECTS = \
-"CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o" \
+"CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o" \
 "CMakeFiles/ray_chaser_tst.dir/main.cpp.o"
 
 # External object files for target ray_chaser_tst
 ray_chaser_tst_EXTERNAL_OBJECTS =
 
-tst/ray_chaser_tst: tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o
+tst/ray_chaser_tst: tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o
 tst/ray_chaser_tst: tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.o
 tst/ray_chaser_tst: tst/CMakeFiles/ray_chaser_tst.dir/build.make
 tst/ray_chaser_tst: src/libray_chaser_lib.a

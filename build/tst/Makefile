@@ -175,29 +175,29 @@ ray_chaser_tst/fast:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/build
 .PHONY : ray_chaser_tst/fast
 
-Formula-test.o: Formula-test.cpp.o
-.PHONY : Formula-test.o
+Tuple-test.o: Tuple-test.cpp.o
+.PHONY : Tuple-test.o
 
 # target to build an object file
-Formula-test.cpp.o:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o
-.PHONY : Formula-test.cpp.o
+Tuple-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o
+.PHONY : Tuple-test.cpp.o
 
-Formula-test.i: Formula-test.cpp.i
-.PHONY : Formula-test.i
+Tuple-test.i: Tuple-test.cpp.i
+.PHONY : Tuple-test.i
 
 # target to preprocess a source file
-Formula-test.cpp.i:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.i
-.PHONY : Formula-test.cpp.i
+Tuple-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.i
+.PHONY : Tuple-test.cpp.i
 
-Formula-test.s: Formula-test.cpp.s
-.PHONY : Formula-test.s
+Tuple-test.s: Tuple-test.cpp.s
+.PHONY : Tuple-test.s
 
 # target to generate assembly for a file
-Formula-test.cpp.s:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.s
-.PHONY : Formula-test.cpp.s
+Tuple-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.s
+.PHONY : Tuple-test.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -236,9 +236,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ray_chaser_tst"
-	@echo "... Formula-test.o"
-	@echo "... Formula-test.i"
-	@echo "... Formula-test.s"
+	@echo "... Tuple-test.o"
+	@echo "... Tuple-test.i"
+	@echo "... Tuple-test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

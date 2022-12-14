@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o"
-  "CMakeFiles/ray_chaser_tst.dir/Formula-test.cpp.o.d"
+  "CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o"
+  "CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o.d"
   "CMakeFiles/ray_chaser_tst.dir/main.cpp.o"
   "CMakeFiles/ray_chaser_tst.dir/main.cpp.o.d"
   "ray_chaser_tst"

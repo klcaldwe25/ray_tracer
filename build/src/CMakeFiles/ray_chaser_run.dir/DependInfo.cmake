@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/kylecaldwell/ray_tracer/src/Formula.cpp" "src/CMakeFiles/ray_chaser_run.dir/Formula.cpp.o" "gcc" "src/CMakeFiles/ray_chaser_run.dir/Formula.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/src/main.cpp" "src/CMakeFiles/ray_chaser_run.dir/main.cpp.o" "gcc" "src/CMakeFiles/ray_chaser_run.dir/main.cpp.o.d"
+  "/Users/kylecaldwell/ray_tracer/src/tuple.cpp" "src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.o" "gcc" "src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.o.d"
   )
 
 # Targets to which this target links.

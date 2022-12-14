@@ -189,33 +189,6 @@ ray_chaser_lib/fast:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/build
 .PHONY : ray_chaser_lib/fast
 
-Formula.o: Formula.cpp.o
-.PHONY : Formula.o
-
-# target to build an object file
-Formula.cpp.o:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/Formula.cpp.o
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/Formula.cpp.o
-.PHONY : Formula.cpp.o
-
-Formula.i: Formula.cpp.i
-.PHONY : Formula.i
-
-# target to preprocess a source file
-Formula.cpp.i:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/Formula.cpp.i
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/Formula.cpp.i
-.PHONY : Formula.cpp.i
-
-Formula.s: Formula.cpp.s
-.PHONY : Formula.s
-
-# target to generate assembly for a file
-Formula.cpp.s:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/Formula.cpp.s
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/Formula.cpp.s
-.PHONY : Formula.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -243,6 +216,33 @@ main.cpp.s:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+tuple.o: tuple.cpp.o
+.PHONY : tuple.o
+
+# target to build an object file
+tuple.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.o
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o
+.PHONY : tuple.cpp.o
+
+tuple.i: tuple.cpp.i
+.PHONY : tuple.i
+
+# target to preprocess a source file
+tuple.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.i
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.i
+.PHONY : tuple.cpp.i
+
+tuple.s: tuple.cpp.s
+.PHONY : tuple.s
+
+# target to generate assembly for a file
+tuple.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.s
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.s
+.PHONY : tuple.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -257,12 +257,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ray_chaser_lib"
 	@echo "... ray_chaser_run"
-	@echo "... Formula.o"
-	@echo "... Formula.i"
-	@echo "... Formula.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... tuple.o"
+	@echo "... tuple.i"
+	@echo "... tuple.s"
 .PHONY : help
 
 
