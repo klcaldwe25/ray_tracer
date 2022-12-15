@@ -197,7 +197,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ray_chaser
+CMAKE_PROJECT_NAME:STATIC=ray_tracer
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.12.1
@@ -347,6 +347,15 @@ ray_chaser_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 ray_chaser_SOURCE_DIR:STATIC=/Users/kylecaldwell/ray_tracer
+
+//Value Computed by CMake
+ray_tracer_BINARY_DIR:STATIC=/Users/kylecaldwell/ray_tracer/build
+
+//Value Computed by CMake
+ray_tracer_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+ray_tracer_SOURCE_DIR:STATIC=/Users/kylecaldwell/ray_tracer
 
 
 ########################

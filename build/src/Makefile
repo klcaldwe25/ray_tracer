@@ -162,40 +162,40 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/ray_chaser_run.dir/rule:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ray_chaser_run.dir/rule
-.PHONY : src/CMakeFiles/ray_chaser_run.dir/rule
+src/CMakeFiles/ray_tracer_run.dir/rule:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ray_tracer_run.dir/rule
+.PHONY : src/CMakeFiles/ray_tracer_run.dir/rule
 
 # Convenience name for target.
-ray_chaser_run: src/CMakeFiles/ray_chaser_run.dir/rule
-.PHONY : ray_chaser_run
+ray_tracer_run: src/CMakeFiles/ray_tracer_run.dir/rule
+.PHONY : ray_tracer_run
 
 # fast build rule for target.
-ray_chaser_run/fast:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/build
-.PHONY : ray_chaser_run/fast
+ray_tracer_run/fast:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_run.dir/build.make src/CMakeFiles/ray_tracer_run.dir/build
+.PHONY : ray_tracer_run/fast
 
 # Convenience name for target.
-src/CMakeFiles/ray_chaser_lib.dir/rule:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ray_chaser_lib.dir/rule
-.PHONY : src/CMakeFiles/ray_chaser_lib.dir/rule
+src/CMakeFiles/ray_tracer_lib.dir/rule:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/ray_tracer_lib.dir/rule
+.PHONY : src/CMakeFiles/ray_tracer_lib.dir/rule
 
 # Convenience name for target.
-ray_chaser_lib: src/CMakeFiles/ray_chaser_lib.dir/rule
-.PHONY : ray_chaser_lib
+ray_tracer_lib: src/CMakeFiles/ray_tracer_lib.dir/rule
+.PHONY : ray_tracer_lib
 
 # fast build rule for target.
-ray_chaser_lib/fast:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/build
-.PHONY : ray_chaser_lib/fast
+ray_tracer_lib/fast:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_lib.dir/build.make src/CMakeFiles/ray_tracer_lib.dir/build
+.PHONY : ray_tracer_lib/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/main.cpp.o
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/main.cpp.o
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_run.dir/build.make src/CMakeFiles/ray_tracer_run.dir/main.cpp.o
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_lib.dir/build.make src/CMakeFiles/ray_tracer_lib.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -203,8 +203,8 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/main.cpp.i
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/main.cpp.i
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_run.dir/build.make src/CMakeFiles/ray_tracer_run.dir/main.cpp.i
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_lib.dir/build.make src/CMakeFiles/ray_tracer_lib.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -212,36 +212,9 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/main.cpp.s
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/main.cpp.s
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_run.dir/build.make src/CMakeFiles/ray_tracer_run.dir/main.cpp.s
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_lib.dir/build.make src/CMakeFiles/ray_tracer_lib.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-tuple.o: tuple.cpp.o
-.PHONY : tuple.o
-
-# target to build an object file
-tuple.cpp.o:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.o
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o
-.PHONY : tuple.cpp.o
-
-tuple.i: tuple.cpp.i
-.PHONY : tuple.i
-
-# target to preprocess a source file
-tuple.cpp.i:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.i
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.i
-.PHONY : tuple.cpp.i
-
-tuple.s: tuple.cpp.s
-.PHONY : tuple.s
-
-# target to generate assembly for a file
-tuple.cpp.s:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.s
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.s
-.PHONY : tuple.cpp.s
 
 # Help Target
 help:
@@ -255,14 +228,11 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ray_chaser_lib"
-	@echo "... ray_chaser_run"
+	@echo "... ray_tracer_lib"
+	@echo "... ray_tracer_run"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... tuple.o"
-	@echo "... tuple.i"
-	@echo "... tuple.s"
 .PHONY : help
 
 

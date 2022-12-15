@@ -1,6 +1,5 @@
 #include "gtest/gtest.h"
 #include <cmath>
-#include "tuple.cpp"
 #include "Tuple.h"
 #include "iostream"
 
@@ -32,15 +31,15 @@ TEST(tupleTest, setVector) {
 }
 
 TEST(tupleTest, isEqual) {
-    Tuple a = vector(1, 2, 3);
-    Tuple b = vector(1, 2, 3);
+    float a = 1.0;
+    float b = 1.0;
 
     EXPECT_TRUE(equal(a, b));
 }
 
 TEST(tupleTest, isNotEqual) {
-    Tuple a = vector(1, 2, 3);
-    Tuple b = vector(1, 2, 2);
+    float a = 1.0;
+    float b = 1.01;
 
     EXPECT_FALSE(equal(a, b));
 }
@@ -121,12 +120,38 @@ TEST(tupleTest, divide) {
 
 TEST(tupleTest, magnitude) {
     Tuple a = vector(1, 2, 3);
-    float b = magnitude(a);
-    float c = std::sqrt(14);
 
-    std::cout << b << "\n";
-    std::cout << c << "\n";
+    EXPECT_TRUE(equal(magnitude(a), std::sqrt(14)));
 
-    EXPECT_EQ(b, c);
+}
+
+TEST(tupleTest, normalize) {
+    Tuple a = vector(1, 2, 3);
+    Tuple b = normalize(a);
+
+    EXPECT_TRUE(equal(magnitude(b), 1.0));
+
+}
+
+TEST(tupleTest, dot) {
+    Tuple a = vector(1, 2, 3);
+    Tuple b = vector(2, 3, 4);
+
+    EXPECT_TRUE(equal(dot(a, b), 20.0));
+}
+
+TEST(tupleTest, cross) {
+    Tuple a = vector(1, 2, 3);
+    Tuple b = vector(2, 3, 4);
+    Tuple c = cross(a, b);
+    Tuple d = cross(b, a);
+
+    EXPECT_EQ(c.getX(), -1);
+    EXPECT_EQ(c.getY(), 2);
+    EXPECT_EQ(c.getZ(), -1); 
+
+    EXPECT_EQ(d.getX(), 1);
+    EXPECT_EQ(d.getY(), -2);
+    EXPECT_EQ(d.getZ(), 1); 
 
 }

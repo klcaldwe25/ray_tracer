@@ -415,11 +415,22 @@ src/CMakeFiles/ray_chaser_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/_types/_nl_item.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
+  /Users/kylecaldwell/ray_tracer/src/projectile.h \
+  /Users/kylecaldwell/ray_tracer/src/Tuple.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/tuple.h
 
-src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.o: /Users/kylecaldwell/ray_tracer/src/tuple.cpp \
-  /Users/kylecaldwell/ray_tracer/src/Tuple.h
 
+/Users/kylecaldwell/ray_tracer/src/tuple.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath:
+
+/Users/kylecaldwell/ray_tracer/src/projectile.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_fsblkcnt_t.h:
 
@@ -785,6 +796,8 @@ src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.o: /Users/kylecaldwell/ray_tracer/sr
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/errno.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/copy_backward.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/limits.h:
@@ -908,8 +921,6 @@ src/CMakeFiles/ray_chaser_run.dir/tuple.cpp.o: /Users/kylecaldwell/ray_tracer/sr
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
-
-/Users/kylecaldwell/ray_tracer/src/tuple.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/concepts:
 

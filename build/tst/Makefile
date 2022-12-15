@@ -162,25 +162,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tst/CMakeFiles/ray_chaser_tst.dir/rule:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/ray_chaser_tst.dir/rule
-.PHONY : tst/CMakeFiles/ray_chaser_tst.dir/rule
+tst/CMakeFiles/ray_tracer_tst.dir/rule:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tst/CMakeFiles/ray_tracer_tst.dir/rule
+.PHONY : tst/CMakeFiles/ray_tracer_tst.dir/rule
 
 # Convenience name for target.
-ray_chaser_tst: tst/CMakeFiles/ray_chaser_tst.dir/rule
-.PHONY : ray_chaser_tst
+ray_tracer_tst: tst/CMakeFiles/ray_tracer_tst.dir/rule
+.PHONY : ray_tracer_tst
 
 # fast build rule for target.
-ray_chaser_tst/fast:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/build
-.PHONY : ray_chaser_tst/fast
+ray_tracer_tst/fast:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/build
+.PHONY : ray_tracer_tst/fast
 
 Tuple-test.o: Tuple-test.cpp.o
 .PHONY : Tuple-test.o
 
 # target to build an object file
 Tuple-test.cpp.o:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o
 .PHONY : Tuple-test.cpp.o
 
 Tuple-test.i: Tuple-test.cpp.i
@@ -188,7 +188,7 @@ Tuple-test.i: Tuple-test.cpp.i
 
 # target to preprocess a source file
 Tuple-test.cpp.i:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.i
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.i
 .PHONY : Tuple-test.cpp.i
 
 Tuple-test.s: Tuple-test.cpp.s
@@ -196,7 +196,7 @@ Tuple-test.s: Tuple-test.cpp.s
 
 # target to generate assembly for a file
 Tuple-test.cpp.s:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.s
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.s
 .PHONY : Tuple-test.cpp.s
 
 main.o: main.cpp.o
@@ -204,7 +204,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.o
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -212,7 +212,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.i
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -220,7 +220,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.s
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -235,7 +235,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... ray_chaser_tst"
+	@echo "... ray_tracer_tst"
 	@echo "... Tuple-test.o"
 	@echo "... Tuple-test.i"
 	@echo "... Tuple-test.s"

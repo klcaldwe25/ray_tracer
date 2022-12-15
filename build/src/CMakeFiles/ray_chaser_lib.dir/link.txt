@@ -1,2 +1,2 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libray_chaser_lib.a CMakeFiles/ray_chaser_lib.dir/main.cpp.o CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ar qc libray_chaser_lib.a CMakeFiles/ray_chaser_lib.dir/main.cpp.o
 /Library/Developer/CommandLineTools/usr/bin/ranlib libray_chaser_lib.a

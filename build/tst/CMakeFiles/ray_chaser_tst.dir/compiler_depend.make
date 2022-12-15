@@ -474,7 +474,6 @@ tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o: /Users/kylecaldwell/ray_trac
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
-  /Users/kylecaldwell/ray_tracer/src/tuple.cpp \
   /Users/kylecaldwell/ray_tracer/src/Tuple.h
 
 tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/tst/main.cpp \
@@ -1484,8 +1483,6 @@ tst/CMakeFiles/ray_chaser_tst.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/tst
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cxxabi.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
-
-/Users/kylecaldwell/ray_tracer/src/tuple.cpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/concepts:
 

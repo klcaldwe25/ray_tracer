@@ -162,43 +162,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ray_chaser_run
+# Target rules for targets named ray_tracer_run
 
 # Build rule for target.
-ray_chaser_run: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ray_chaser_run
-.PHONY : ray_chaser_run
+ray_tracer_run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ray_tracer_run
+.PHONY : ray_tracer_run
 
 # fast build rule for target.
-ray_chaser_run/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_run.dir/build.make src/CMakeFiles/ray_chaser_run.dir/build
-.PHONY : ray_chaser_run/fast
+ray_tracer_run/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_run.dir/build.make src/CMakeFiles/ray_tracer_run.dir/build
+.PHONY : ray_tracer_run/fast
 
 #=============================================================================
-# Target rules for targets named ray_chaser_lib
+# Target rules for targets named ray_tracer_lib
 
 # Build rule for target.
-ray_chaser_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ray_chaser_lib
-.PHONY : ray_chaser_lib
+ray_tracer_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ray_tracer_lib
+.PHONY : ray_tracer_lib
 
 # fast build rule for target.
-ray_chaser_lib/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_chaser_lib.dir/build.make src/CMakeFiles/ray_chaser_lib.dir/build
-.PHONY : ray_chaser_lib/fast
+ray_tracer_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/ray_tracer_lib.dir/build.make src/CMakeFiles/ray_tracer_lib.dir/build
+.PHONY : ray_tracer_lib/fast
 
 #=============================================================================
-# Target rules for targets named ray_chaser_tst
+# Target rules for targets named ray_tracer_tst
 
 # Build rule for target.
-ray_chaser_tst: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ray_chaser_tst
-.PHONY : ray_chaser_tst
+ray_tracer_tst: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ray_tracer_tst
+.PHONY : ray_tracer_tst
 
 # fast build rule for target.
-ray_chaser_tst/fast:
-	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_chaser_tst.dir/build.make tst/CMakeFiles/ray_chaser_tst.dir/build
-.PHONY : ray_chaser_tst/fast
+ray_tracer_tst/fast:
+	$(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/build
+.PHONY : ray_tracer_tst/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -268,9 +268,9 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
-	@echo "... ray_chaser_lib"
-	@echo "... ray_chaser_run"
-	@echo "... ray_chaser_tst"
+	@echo "... ray_tracer_lib"
+	@echo "... ray_tracer_run"
+	@echo "... ray_tracer_tst"
 .PHONY : help
 
 

@@ -83,9 +83,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/ray_chaser_run.dir/DependInfo.cmake"
-  "src/CMakeFiles/ray_chaser_lib.dir/DependInfo.cmake"
-  "tst/CMakeFiles/ray_chaser_tst.dir/DependInfo.cmake"
+  "src/CMakeFiles/ray_tracer_run.dir/DependInfo.cmake"
+  "src/CMakeFiles/ray_tracer_lib.dir/DependInfo.cmake"
+  "tst/CMakeFiles/ray_tracer_tst.dir/DependInfo.cmake"
   "googletest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "googletest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake"

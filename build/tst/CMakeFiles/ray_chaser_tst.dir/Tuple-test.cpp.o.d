@@ -472,5 +472,4 @@ tst/CMakeFiles/ray_chaser_tst.dir/Tuple-test.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
-  /Users/kylecaldwell/ray_tracer/src/tuple.cpp \
   /Users/kylecaldwell/ray_tracer/src/Tuple.h

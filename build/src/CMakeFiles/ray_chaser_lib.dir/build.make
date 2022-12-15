@@ -83,33 +83,17 @@ src/CMakeFiles/ray_chaser_lib.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_chaser_lib.dir/main.cpp.s"
 	cd /Users/kylecaldwell/ray_tracer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kylecaldwell/ray_tracer/src/main.cpp -o CMakeFiles/ray_chaser_lib.dir/main.cpp.s
 
-src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o: src/CMakeFiles/ray_chaser_lib.dir/flags.make
-src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o: /Users/kylecaldwell/ray_tracer/src/tuple.cpp
-src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o: src/CMakeFiles/ray_chaser_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o"
-	cd /Users/kylecaldwell/ray_tracer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o -MF CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o.d -o CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o -c /Users/kylecaldwell/ray_tracer/src/tuple.cpp
-
-src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_chaser_lib.dir/tuple.cpp.i"
-	cd /Users/kylecaldwell/ray_tracer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kylecaldwell/ray_tracer/src/tuple.cpp > CMakeFiles/ray_chaser_lib.dir/tuple.cpp.i
-
-src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_chaser_lib.dir/tuple.cpp.s"
-	cd /Users/kylecaldwell/ray_tracer/build/src && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kylecaldwell/ray_tracer/src/tuple.cpp -o CMakeFiles/ray_chaser_lib.dir/tuple.cpp.s
-
 # Object files for target ray_chaser_lib
 ray_chaser_lib_OBJECTS = \
-"CMakeFiles/ray_chaser_lib.dir/main.cpp.o" \
-"CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o"
+"CMakeFiles/ray_chaser_lib.dir/main.cpp.o"
 
 # External object files for target ray_chaser_lib
 ray_chaser_lib_EXTERNAL_OBJECTS =
 
 src/libray_chaser_lib.a: src/CMakeFiles/ray_chaser_lib.dir/main.cpp.o
-src/libray_chaser_lib.a: src/CMakeFiles/ray_chaser_lib.dir/tuple.cpp.o
 src/libray_chaser_lib.a: src/CMakeFiles/ray_chaser_lib.dir/build.make
 src/libray_chaser_lib.a: src/CMakeFiles/ray_chaser_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libray_chaser_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libray_chaser_lib.a"
 	cd /Users/kylecaldwell/ray_tracer/build/src && $(CMAKE_COMMAND) -P CMakeFiles/ray_chaser_lib.dir/cmake_clean_target.cmake
 	cd /Users/kylecaldwell/ray_tracer/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ray_chaser_lib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12) # version can be different
 
-project(ray_chaser) #name of your project
+project(ray_tracer) #name of your project
 
 include_directories(src)
 
