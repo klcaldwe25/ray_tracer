@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/kylecaldwell/ray_tracer/tst/Canvas-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o.d"
+  "/Users/kylecaldwell/ray_tracer/tst/Color-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/tst/main.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o.d"
   )

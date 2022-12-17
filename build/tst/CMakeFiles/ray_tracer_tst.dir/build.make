@@ -69,10 +69,38 @@ include tst/CMakeFiles/ray_tracer_tst.dir/progress.make
 # Include the compile flags for this target's objects.
 include tst/CMakeFiles/ray_tracer_tst.dir/flags.make
 
+tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/flags.make
+tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Canvas-test.cpp
+tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o -MF CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o.d -o CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o -c /Users/kylecaldwell/ray_tracer/tst/Canvas-test.cpp
+
+tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.i"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kylecaldwell/ray_tracer/tst/Canvas-test.cpp > CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.i
+
+tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.s"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kylecaldwell/ray_tracer/tst/Canvas-test.cpp -o CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.s
+
+tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/flags.make
+tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Color-test.cpp
+tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o -MF CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o.d -o CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o -c /Users/kylecaldwell/ray_tracer/tst/Color-test.cpp
+
+tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.i"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/kylecaldwell/ray_tracer/tst/Color-test.cpp > CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.i
+
+tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.s"
+	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/kylecaldwell/ray_tracer/tst/Color-test.cpp -o CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.s
+
 tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/flags.make
 tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp
 tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o"
 	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o -MF CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o.d -o CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o -c /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp
 
 tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.i: cmake_force
@@ -86,7 +114,7 @@ tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.s: cmake_force
 tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/flags.make
 tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/tst/main.cpp
 tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o: tst/CMakeFiles/ray_tracer_tst.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o"
 	cd /Users/kylecaldwell/ray_tracer/build/tst && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o -MF CMakeFiles/ray_tracer_tst.dir/main.cpp.o.d -o CMakeFiles/ray_tracer_tst.dir/main.cpp.o -c /Users/kylecaldwell/ray_tracer/tst/main.cpp
 
 tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.i: cmake_force
@@ -99,19 +127,23 @@ tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.s: cmake_force
 
 # Object files for target ray_tracer_tst
 ray_tracer_tst_OBJECTS = \
+"CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o" \
+"CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o" \
 "CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o" \
 "CMakeFiles/ray_tracer_tst.dir/main.cpp.o"
 
 # External object files for target ray_tracer_tst
 ray_tracer_tst_EXTERNAL_OBJECTS =
 
+tst/ray_tracer_tst: tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o
+tst/ray_tracer_tst: tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o
 tst/ray_tracer_tst: tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o
 tst/ray_tracer_tst: tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o
 tst/ray_tracer_tst: tst/CMakeFiles/ray_tracer_tst.dir/build.make
 tst/ray_tracer_tst: src/libray_tracer_lib.a
 tst/ray_tracer_tst: lib/libgtest.a
 tst/ray_tracer_tst: tst/CMakeFiles/ray_tracer_tst.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ray_tracer_tst"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/kylecaldwell/ray_tracer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ray_tracer_tst"
 	cd /Users/kylecaldwell/ray_tracer/build/tst && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ray_tracer_tst.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

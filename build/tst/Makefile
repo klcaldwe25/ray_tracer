@@ -175,6 +175,54 @@ ray_tracer_tst/fast:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/build
 .PHONY : ray_tracer_tst/fast
 
+Canvas-test.o: Canvas-test.cpp.o
+.PHONY : Canvas-test.o
+
+# target to build an object file
+Canvas-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.o
+.PHONY : Canvas-test.cpp.o
+
+Canvas-test.i: Canvas-test.cpp.i
+.PHONY : Canvas-test.i
+
+# target to preprocess a source file
+Canvas-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.i
+.PHONY : Canvas-test.cpp.i
+
+Canvas-test.s: Canvas-test.cpp.s
+.PHONY : Canvas-test.s
+
+# target to generate assembly for a file
+Canvas-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Canvas-test.cpp.s
+.PHONY : Canvas-test.cpp.s
+
+Color-test.o: Color-test.cpp.o
+.PHONY : Color-test.o
+
+# target to build an object file
+Color-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.o
+.PHONY : Color-test.cpp.o
+
+Color-test.i: Color-test.cpp.i
+.PHONY : Color-test.i
+
+# target to preprocess a source file
+Color-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.i
+.PHONY : Color-test.cpp.i
+
+Color-test.s: Color-test.cpp.s
+.PHONY : Color-test.s
+
+# target to generate assembly for a file
+Color-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.s
+.PHONY : Color-test.cpp.s
+
 Tuple-test.o: Tuple-test.cpp.o
 .PHONY : Tuple-test.o
 
@@ -236,6 +284,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ray_tracer_tst"
+	@echo "... Canvas-test.o"
+	@echo "... Canvas-test.i"
+	@echo "... Canvas-test.s"
+	@echo "... Color-test.o"
+	@echo "... Color-test.i"
+	@echo "... Color-test.s"
 	@echo "... Tuple-test.o"
 	@echo "... Tuple-test.i"
 	@echo "... Tuple-test.s"
