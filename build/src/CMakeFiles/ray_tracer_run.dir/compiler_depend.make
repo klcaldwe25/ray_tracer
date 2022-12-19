@@ -420,8 +420,29 @@ src/CMakeFiles/ray_tracer_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
   /Users/kylecaldwell/ray_tracer/src/Tuple.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/Canvas.h \
+  /Users/kylecaldwell/ray_tracer/src/Color.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__split_buffer \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/fstream \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/stack \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/deque \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iomanip
 
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iomanip:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/deque:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/stack:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/fstream:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__split_buffer:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/vector:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h:
 
@@ -889,6 +910,8 @@ src/CMakeFiles/ray_tracer_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/common_iterator.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/filesystem:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional/perfect_forward.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__functional/bind_front.h:
@@ -918,6 +941,8 @@ src/CMakeFiles/ray_tracer_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/readable_traits.h:
+
+/Users/kylecaldwell/ray_tracer/src/Color.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/concepts:
 
@@ -1190,6 +1215,8 @@ src/CMakeFiles/ray_tracer_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_suseconds_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_ct_rune_t.h:
+
+/Users/kylecaldwell/ray_tracer/src/Canvas.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__mbstate_t.h:
 

@@ -1,4 +1,6 @@
 #include "Tuple.h"
+#include "Canvas.h"
+#include <fstream>
 
 #ifndef RAY_TRACER_PROJECTILE_H
 #define RAY_TRACER_PROJECTILE_H
@@ -76,8 +78,18 @@ Projectile tick(Environment env, Projectile proj) {
 }
 
 void fireProjectile() {
-    Projectile p = Projectile(Point(0, 1, 0), tuple.normalize(Vector(1,1,0)));
+    Point start = Point(0, 1, 0);
+    Tuple velocity = tuple.multiply(tuple.normalize(Vector(1,1.8,0)), 11.25);
+
+    Projectile p = Projectile(start, velocity);
     Environment e = Environment(Vector(0, -0.1, 0), Vector(-0.01, 0, 0));
+
+    int x = 0;
+    int y = 0;
+    int width = 900;
+    int height = 550;
+
+    Canvas c = Canvas(width, height, Color(0, 0, 0));
 
     while (true) {
 
@@ -86,8 +98,21 @@ void fireProjectile() {
             break;
         }
 
-        std::cout << "( " << p.getPosition().getX() << ", " << p.getPosition().getY() << ", " << p.getPosition().getZ() << " )\n";
-    }    
+        x = std::round(p.getPosition().getX());
+        y = std::round(p.getPosition().getY());
+
+        c.setPixel(x, (height - y), Color(1, 1 ,1));
+
+    }   
+
+    std::string ppm_str = c.to_ppm(c);
+
+    std::ofstream file;
+    file.open("cannon.ppm", std::ios::out);
+
+    file << ppm_str;
+
+    file.close();
 }
 
 #endif
