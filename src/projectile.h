@@ -1,4 +1,6 @@
 #include "Tuple.h"
+#include "Canvas.h"
+#include <fstream>
 
 #ifndef RAY_TRACER_PROJECTILE_H
 #define RAY_TRACER_PROJECTILE_H
@@ -16,11 +18,11 @@ class Projectile {
         }
 
         void setPosition(float x, float y, float z) {
-            _position = point(x, y, z);
+            _position = Point(x, y, z);
         }
 
         void setVelocity(float x, float y, float z) {
-            _velocity = vector(x, y, z);
+            _velocity = Vector(x, y, z);
         }
 
         Tuple getPosition() {
@@ -46,11 +48,11 @@ class Environment {
         }
 
         void setGravity(float x, float y, float z) {
-            _gravity = vector(x, y, z);
+            _gravity = Vector(x, y, z);
         }
 
         void setWind(float x, float y, float z) {
-            _wind = vector(x, y, z);
+            _wind = Vector(x, y, z);
         }
 
         Tuple getGravity() {
@@ -63,10 +65,12 @@ class Environment {
 
 };
 
+Tuple tuple;
+
 Projectile tick(Environment env, Projectile proj) {
-    Tuple position = add(proj.getPosition(), proj.getVelocity());
-    Tuple velocity = add(
-        add(proj.getVelocity(), env.getGravity()),
+    Tuple position = tuple.add(proj.getPosition(), proj.getVelocity());
+    Tuple velocity = tuple.add(
+        tuple.add(proj.getVelocity(), env.getGravity()),
         env.getWind()
     );
 
@@ -74,8 +78,18 @@ Projectile tick(Environment env, Projectile proj) {
 }
 
 void fireProjectile() {
-    Projectile p = Projectile(point(0, 1, 0), normalize(vector(1,1,0)));
-    Environment e = Environment(vector(0, -0.1, 0), vector(-0.01, 0, 0));
+    Point start = Point(0, 1, 0);
+    Tuple velocity = tuple.multiply(tuple.normalize(Vector(1,1.8,0)), 11.25);
+
+    Projectile p = Projectile(start, velocity);
+    Environment e = Environment(Vector(0, -0.1, 0), Vector(-0.01, 0, 0));
+
+    int x = 0;
+    int y = 0;
+    int width = 900;
+    int height = 550;
+
+    Canvas c = Canvas(width, height, Color(1, 1, 1));
 
     while (true) {
 
@@ -83,9 +97,23 @@ void fireProjectile() {
         if (p.getPosition().getY() <= 0 ) {
             break;
         }
-                
-        std::cout << "( " << p.getPosition().getX() << ", " << p.getPosition().getY() << ", " << p.getPosition().getZ() << " )\n";
-    }    
+
+        x = std::round(p.getPosition().getX());
+        y = std::round(p.getPosition().getY());
+
+        c.setPixel(x, (height - y), Color(1, 0 ,0));
+
+    }   
+
+    std::string ppm_str = c.to_ppm();
+
+    std::ofstream file;
+    file.open("cannon.ppm", std::ios::out);
+
+    file << ppm_str;
+
+    file.close();
+
 }
 
 #endif
