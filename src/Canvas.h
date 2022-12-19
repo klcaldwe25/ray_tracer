@@ -60,24 +60,19 @@ class Canvas {
             std::cout << "( " << _grid[row][col].getRed() << ", " << _grid[row][col].getGreen() << ", " << _grid[row][col].getBlue() << " )\n";
         }
 
-        std::string to_ppm(Canvas canvas) {
+        std::string to_ppm() {
             std::string value;
             std::string line;
-            int height = canvas.getHeight();
-            int width = canvas.getWidth();
-            std::vector< std::vector<Color> > grid = canvas.getGrid();
 
-            std::string ppm_string = "P3\n" + 
-                std::to_string(width) + " " + std::to_string(height) + "\n255\n";  
+            std::string ppm_string = "P3\n" + std::to_string(_width) + " " + std::to_string(_height) + "\n255\n";  
 
-
-            for (int row=0; row<height; row++) {
+            for (int row=0; row<_height; row++) {
                 line = "";
-                for (int col=0; col<width; col++) {
+                for (int col=0; col<_width; col++) {
                     std::vector<float> colors;
-                    colors.push_back(grid[row][col].getRed());
-                    colors.push_back(grid[row][col].getGreen());
-                    colors.push_back(grid[row][col].getBlue());
+                    colors.push_back(_grid[row][col].getRed());
+                    colors.push_back(_grid[row][col].getGreen());
+                    colors.push_back(_grid[row][col].getBlue());
                     for (float color : colors) {
                         if (color < 0) {
                             value = "0 ";

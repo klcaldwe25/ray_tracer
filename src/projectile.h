@@ -89,7 +89,7 @@ void fireProjectile() {
     int width = 900;
     int height = 550;
 
-    Canvas c = Canvas(width, height, Color(0, 0, 0));
+    Canvas c = Canvas(width, height, Color(1, 1, 1));
 
     while (true) {
 
@@ -101,11 +101,11 @@ void fireProjectile() {
         x = std::round(p.getPosition().getX());
         y = std::round(p.getPosition().getY());
 
-        c.setPixel(x, (height - y), Color(1, 1 ,1));
+        c.setPixel(x, (height - y), Color(1, 0 ,0));
 
     }   
 
-    std::string ppm_str = c.to_ppm(c);
+    std::string ppm_str = c.to_ppm();
 
     std::ofstream file;
     file.open("cannon.ppm", std::ios::out);
@@ -113,6 +113,7 @@ void fireProjectile() {
     file << ppm_str;
 
     file.close();
+
 }
 
 #endif
