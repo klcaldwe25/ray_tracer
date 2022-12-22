@@ -611,3 +611,77 @@ TEST (MatrixTest, translationThree) {
     EXPECT_TRUE( p1.isEqual( b.multiply(p1) ) );
 
 }
+
+TEST (MatrixTest, scalingOne) {
+    ScalingMatrix a = ScalingMatrix(2, 3, 4);
+
+    Matrix p1 = Matrix(4, 1);
+    p1.setCell(0, 0, -4);
+    p1.setCell(1, 0, 6);
+    p1.setCell(2, 0, 8);
+    p1.setCell(3, 0, 1);  
+
+    Matrix p2 = Matrix(4, 1);
+    p2.setCell(0, 0, -8);
+    p2.setCell(1, 0, 18);
+    p2.setCell(2, 0, 32);
+    p2.setCell(3, 0, 1);  
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, scalingTwo) {
+    ScalingMatrix a = ScalingMatrix(2, 3, 4);
+
+    Matrix p1 = Matrix(4, 1);
+    p1.setCell(0, 0, -4);
+    p1.setCell(1, 0, 6);
+    p1.setCell(2, 0, 8);
+    p1.setCell(3, 0, 0);  
+
+    Matrix p2 = Matrix(4, 1);
+    p2.setCell(0, 0, -8);
+    p2.setCell(1, 0, 18);
+    p2.setCell(2, 0, 32);
+    p2.setCell(3, 0, 0);  
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, scalingThree) {
+    ScalingMatrix a = ScalingMatrix(2, 3, 4);
+
+    Matrix b = a.inverse();
+
+    Matrix p1 = Matrix(4, 1);
+    p1.setCell(0, 0, -4);
+    p1.setCell(1, 0, 6);
+    p1.setCell(2, 0, 8);
+    p1.setCell(3, 0, 0);  
+
+    Matrix p2 = Matrix(4, 1);
+    p2.setCell(0, 0, -2);
+    p2.setCell(1, 0, 2);
+    p2.setCell(2, 0, 2);
+    p2.setCell(3, 0, 0);  
+
+    EXPECT_TRUE( p2.isEqual( b.multiply(p1) ) );
+}
+
+TEST (MatrixTest, scalingFour) {
+    ScalingMatrix a = ScalingMatrix(-1, 1, 1);
+
+    Matrix p1 = Matrix(4, 1);
+    p1.setCell(0, 0, 2);
+    p1.setCell(1, 0, 3);
+    p1.setCell(2, 0, 4);
+    p1.setCell(3, 0, 1);  
+
+    Matrix p2 = Matrix(4, 1);
+    p2.setCell(0, 0, -2);
+    p2.setCell(1, 0, 3);
+    p2.setCell(2, 0, 4);
+    p2.setCell(3, 0, 1);  
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}

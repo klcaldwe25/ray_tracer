@@ -206,9 +206,24 @@ class TranslationMatrix : public Matrix {
         TranslationMatrix(float x, float y, float z) {
             _rows = 4;
             _cols = 4;
+            
             _matrix.push_back({1, 0, 0, x});
             _matrix.push_back({0, 1, 0, y});
             _matrix.push_back({0, 0, 1, z});
+            _matrix.push_back({0, 0, 0, 1});
+
+        }
+};
+
+class ScalingMatrix : public Matrix {
+    public:
+        ScalingMatrix(float x, float y, float z) {
+            _rows = 4;
+            _cols = 4;
+
+            _matrix.push_back({x, 0, 0, 0});
+            _matrix.push_back({0, y, 0, 0});
+            _matrix.push_back({0, 0, z, 0});
             _matrix.push_back({0, 0, 0, 1});
 
         }
