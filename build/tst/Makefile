@@ -223,6 +223,30 @@ Color-test.cpp.s:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.s
 .PHONY : Color-test.cpp.s
 
+Matrix-test.o: Matrix-test.cpp.o
+.PHONY : Matrix-test.o
+
+# target to build an object file
+Matrix-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.o
+.PHONY : Matrix-test.cpp.o
+
+Matrix-test.i: Matrix-test.cpp.i
+.PHONY : Matrix-test.i
+
+# target to preprocess a source file
+Matrix-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.i
+.PHONY : Matrix-test.cpp.i
+
+Matrix-test.s: Matrix-test.cpp.s
+.PHONY : Matrix-test.s
+
+# target to generate assembly for a file
+Matrix-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.s
+.PHONY : Matrix-test.cpp.s
+
 Tuple-test.o: Tuple-test.cpp.o
 .PHONY : Tuple-test.o
 
@@ -290,6 +314,9 @@ help:
 	@echo "... Color-test.o"
 	@echo "... Color-test.i"
 	@echo "... Color-test.s"
+	@echo "... Matrix-test.o"
+	@echo "... Matrix-test.i"
+	@echo "... Matrix-test.s"
 	@echo "... Tuple-test.o"
 	@echo "... Tuple-test.i"
 	@echo "... Tuple-test.s"
