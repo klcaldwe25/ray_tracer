@@ -7,30 +7,30 @@
 
 class Projectile {
     private:
-        Tuple _position;
-        Tuple _velocity;
+        Tuple mPosition;
+        Tuple mVelocity;
     public:
         Projectile(){}
 
         Projectile(Tuple position, Tuple velocity) {
-            _position = position;
-            _velocity = velocity;
+            mPosition = position;
+            mVelocity = velocity;
         }
 
         void setPosition(float x, float y, float z) {
-            _position = Point(x, y, z);
+            mPosition = Point(x, y, z);
         }
 
         void setVelocity(float x, float y, float z) {
-            _velocity = Vector(x, y, z);
+            mVelocity = Vector(x, y, z);
         }
 
         Tuple getPosition() {
-            return _position;
+            return mPosition;
         }
 
         Tuple getVelocity() {
-            return _velocity;
+            return mVelocity;
         }
 };
 

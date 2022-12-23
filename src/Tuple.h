@@ -5,51 +5,51 @@
 
 class Tuple {
     protected:
-        float _x;
-        float _y;
-        float _z;
-        float _w;
+        float mX;
+        float mY;
+        float mZ;
+        float mW;
 
     public:
         Tuple() {}
 
         Tuple (float x, float y, float z, float w) {
-            _x = x;
-            _y = y;
-            _z = z;
-            _w = w;
+            mX = x;
+            mY = y;
+            mZ = z;
+            mW = w;
         }
 
         void setX (float x) {
-            _x = x;
+            mX = x;
         }
 
         void setY (float y) {
-            _y = y;
+            mY = y;
         }
 
         void setZ (float z) {
-            _z = z;
+            mZ = z;
         }
 
         void setW (float w) {
-            _w = w;
+            mW = w;
         }
 
         float getX () {
-            return _x;
+            return mX;
         }
 
         float getY () {
-            return _y;
+            return mY;
         }
 
         float getZ () {
-            return _z;
+            return mZ;
         }
 
         float getW () {
-            return _w;
+            return mW;
         }
 
         bool equal(float a, float b) {
@@ -146,20 +146,20 @@ class Tuple {
 class Point : public Tuple {
     public:
         Point(float x, float y, float z) {
-            _x = x;
-            _y = y;
-            _z = z;
-            _w = 1;
+            mX = x;
+            mY = y;
+            mZ = z;
+            mW = 1;
         }
 };
 
 class Vector : public Tuple {
     public:
         Vector(float x, float y, float z) {
-            _x = x;
-            _y = y;
-            _z = z;
-            _w = 0;
+            mX = x;
+            mY = y;
+            mZ = z;
+            mW = 0;
         }
 };
 

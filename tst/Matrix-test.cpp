@@ -699,3 +699,63 @@ TEST (MatrixTest, rotationFour) {
     EXPECT_TRUE( p2.isEqual( half_quarter.multiply(p1) ) );
     EXPECT_TRUE( p3.isEqual( full_quarter.multiply(p1) ) );
 }
+
+TEST (MatrixTest, shearingOne) {
+    ShearingMatrix a = ShearingMatrix(1, 0, 0, 0, 0, 0);
+
+    PointMatrix p1 = PointMatrix(2, 3, 4);
+
+    PointMatrix p2 = PointMatrix(5, 3, 4);
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, shearingTwo) {
+    ShearingMatrix a = ShearingMatrix(0, 1, 0, 0, 0, 0);
+
+    PointMatrix p1 = PointMatrix(2, 3, 4);
+
+    PointMatrix p2 = PointMatrix(6, 3, 4);
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, shearingThree) {
+    ShearingMatrix a = ShearingMatrix(0, 0, 1, 0, 0, 0);
+
+    PointMatrix p1 = PointMatrix(2, 3, 4);
+
+    PointMatrix p2 = PointMatrix(2, 5, 4);
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, shearingFour) {
+    ShearingMatrix a = ShearingMatrix(0, 0, 0, 1, 0, 0);
+
+    PointMatrix p1 = PointMatrix(2, 3, 4);
+
+    PointMatrix p2 = PointMatrix(2, 7, 4);
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, shearingFive) {
+    ShearingMatrix a = ShearingMatrix(0, 0, 0, 0, 1, 0);
+
+    PointMatrix p1 = PointMatrix(2, 3, 4);
+
+    PointMatrix p2 = PointMatrix(2, 3, 6);
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, shearingSix) {
+    ShearingMatrix a = ShearingMatrix(0, 0, 0, 0, 0, 1);
+
+    PointMatrix p1 = PointMatrix(2, 3, 4);
+
+    PointMatrix p2 = PointMatrix(2, 3, 7);
+
+    EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
