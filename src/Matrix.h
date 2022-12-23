@@ -1,4 +1,5 @@
 #include <vector>
+#include <math.h>
 
 #ifndef RAY_TRACER_MATRIX_H
 #define RAY_TRACER_MATRIX_H
@@ -146,7 +147,6 @@ class Matrix {
 
         Matrix inverse() {
             if (!invertible()) {
-                std::cout << "Not invertible\n";
                 throw std::invalid_argument("Not invertible");
             }
 
@@ -175,6 +175,32 @@ class Matrix {
                 return false;
             }
         }        
+};
+
+class PointMatrix : public Matrix {
+    public:
+        PointMatrix(float x, float y, float z) {
+            _rows = 4;
+            _cols = 1;
+
+            _matrix.push_back({x});
+            _matrix.push_back({y});
+            _matrix.push_back({z});
+            _matrix.push_back({1});            
+        }
+};
+
+class VectorMatrix : public Matrix {
+    public:
+        VectorMatrix(float x, float y, float z) {
+            _rows = 4;
+            _cols = 1;
+
+            _matrix.push_back({x});
+            _matrix.push_back({y});
+            _matrix.push_back({z});
+            _matrix.push_back({0});            
+        }
 };
 
 class IdentityMatrix : public Matrix { 
@@ -206,7 +232,7 @@ class TranslationMatrix : public Matrix {
         TranslationMatrix(float x, float y, float z) {
             _rows = 4;
             _cols = 4;
-            
+
             _matrix.push_back({1, 0, 0, x});
             _matrix.push_back({0, 1, 0, y});
             _matrix.push_back({0, 0, 1, z});
@@ -227,6 +253,47 @@ class ScalingMatrix : public Matrix {
             _matrix.push_back({0, 0, 0, 1});
 
         }
+};
+
+class RotationMatrix : public Matrix {
+    public:
+        RotationMatrix() {
+            _rows = 4;
+            _cols = 4;
+
+            for (int i=0; i<_rows; i++) {
+                std::vector<float> v1;
+                for (int j=0; j<_cols; j++) {
+                    if (i == j) {
+                        v1.push_back(1);
+                    } else {
+                        v1.push_back(0);
+                    }
+                }
+                _matrix.push_back(v1);
+            }      
+        }
+
+        void x_rotation(float r) {
+            _matrix[1][1] = cos(r);
+            _matrix[1][2] = -( sin(r) );
+            _matrix[2][1] = sin(r);
+            _matrix[2][2] = cos(r);
+        }
+
+        void y_rotation(float r) {
+            _matrix[0][0] = cos(r);
+            _matrix[0][2] = sin(r);
+            _matrix[2][0] = -( sin(r) );
+            _matrix[2][2] = cos(r);
+        }        
+
+        void z_rotation(float r) {
+            _matrix[0][0] = cos(r);
+            _matrix[0][1] = -( sin(r) );
+            _matrix[1][0] = sin(r) ;
+            _matrix[1][1] = cos(r);
+        } 
 };
 
 #endif

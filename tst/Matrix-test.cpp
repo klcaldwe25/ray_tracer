@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "Matrix.h"
 #include "Tuple.h"
+#include <math.h>
 
 TEST(MatrixTest, getCell) {
     Matrix a = Matrix(2, 2);
@@ -561,17 +562,9 @@ TEST (MatrixTest, inverseFour) {
 TEST (MatrixTest, translationOne) {
     TranslationMatrix a = TranslationMatrix(5, -3, 2);
 
-    Matrix p1 = Matrix(4, 1);
-    p1.setCell(0, 0, -3);
-    p1.setCell(1, 0, 4);
-    p1.setCell(2, 0, 5);
-    p1.setCell(3, 0, 1);
+    PointMatrix p1 = PointMatrix(-3, 4, 5);
 
-    Matrix p2 = Matrix(4, 1);
-    p2.setCell(0, 0, 2);
-    p2.setCell(1, 0, 1);
-    p2.setCell(2, 0, 7);
-    p2.setCell(3, 0, 1);   
+    PointMatrix p2 = PointMatrix(2, 1, 7); 
 
     EXPECT_TRUE( p2.isEqual(a.multiply(p1) ) );
 }
@@ -581,17 +574,9 @@ TEST (MatrixTest, translationTwo) {
 
     Matrix b = a.inverse();
 
-    Matrix p1 = Matrix(4, 1);
-    p1.setCell(0, 0, -3);
-    p1.setCell(1, 0, 4);
-    p1.setCell(2, 0, 5);
-    p1.setCell(3, 0, 1);
+    PointMatrix p1 = PointMatrix(-3, 4, 5);
 
-    Matrix p2 = Matrix(4, 1);
-    p2.setCell(0, 0, -8);
-    p2.setCell(1, 0, 7);
-    p2.setCell(2, 0, 3);
-    p2.setCell(3, 0, 1);    
+    PointMatrix p2 = PointMatrix(-8, 7, 3);
 
     EXPECT_TRUE( p2.isEqual( b.multiply(p1) ) );
 
@@ -602,11 +587,7 @@ TEST (MatrixTest, translationThree) {
 
     Matrix b = a.inverse();
 
-    Matrix p1 = Matrix(4, 1);
-    p1.setCell(0, 0, -3);
-    p1.setCell(1, 0, 4);
-    p1.setCell(2, 0, 5);
-    p1.setCell(3, 0, 0);  
+    VectorMatrix p1 = VectorMatrix(-3, 4, 5);
 
     EXPECT_TRUE( p1.isEqual( b.multiply(p1) ) );
 
@@ -615,17 +596,9 @@ TEST (MatrixTest, translationThree) {
 TEST (MatrixTest, scalingOne) {
     ScalingMatrix a = ScalingMatrix(2, 3, 4);
 
-    Matrix p1 = Matrix(4, 1);
-    p1.setCell(0, 0, -4);
-    p1.setCell(1, 0, 6);
-    p1.setCell(2, 0, 8);
-    p1.setCell(3, 0, 1);  
+    PointMatrix p1 = PointMatrix(-4, 6, 8);
 
-    Matrix p2 = Matrix(4, 1);
-    p2.setCell(0, 0, -8);
-    p2.setCell(1, 0, 18);
-    p2.setCell(2, 0, 32);
-    p2.setCell(3, 0, 1);  
+    PointMatrix p2 = PointMatrix(-8, 18, 32); 
 
     EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
 }
@@ -633,17 +606,9 @@ TEST (MatrixTest, scalingOne) {
 TEST (MatrixTest, scalingTwo) {
     ScalingMatrix a = ScalingMatrix(2, 3, 4);
 
-    Matrix p1 = Matrix(4, 1);
-    p1.setCell(0, 0, -4);
-    p1.setCell(1, 0, 6);
-    p1.setCell(2, 0, 8);
-    p1.setCell(3, 0, 0);  
+    VectorMatrix p1 = VectorMatrix(-4, 6, 8);
 
-    Matrix p2 = Matrix(4, 1);
-    p2.setCell(0, 0, -8);
-    p2.setCell(1, 0, 18);
-    p2.setCell(2, 0, 32);
-    p2.setCell(3, 0, 0);  
+    VectorMatrix p2 = VectorMatrix(-8, 18, 32);  
 
     EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
 }
@@ -653,17 +618,9 @@ TEST (MatrixTest, scalingThree) {
 
     Matrix b = a.inverse();
 
-    Matrix p1 = Matrix(4, 1);
-    p1.setCell(0, 0, -4);
-    p1.setCell(1, 0, 6);
-    p1.setCell(2, 0, 8);
-    p1.setCell(3, 0, 0);  
+    VectorMatrix p1 = VectorMatrix(-4, 6, 8); 
 
-    Matrix p2 = Matrix(4, 1);
-    p2.setCell(0, 0, -2);
-    p2.setCell(1, 0, 2);
-    p2.setCell(2, 0, 2);
-    p2.setCell(3, 0, 0);  
+    VectorMatrix p2 = VectorMatrix(-2, 2, 2);
 
     EXPECT_TRUE( p2.isEqual( b.multiply(p1) ) );
 }
@@ -671,17 +628,74 @@ TEST (MatrixTest, scalingThree) {
 TEST (MatrixTest, scalingFour) {
     ScalingMatrix a = ScalingMatrix(-1, 1, 1);
 
-    Matrix p1 = Matrix(4, 1);
-    p1.setCell(0, 0, 2);
-    p1.setCell(1, 0, 3);
-    p1.setCell(2, 0, 4);
-    p1.setCell(3, 0, 1);  
+    PointMatrix p1 = PointMatrix(2, 3, 4);
 
-    Matrix p2 = Matrix(4, 1);
-    p2.setCell(0, 0, -2);
-    p2.setCell(1, 0, 3);
-    p2.setCell(2, 0, 4);
-    p2.setCell(3, 0, 1);  
+    PointMatrix p2 = PointMatrix(-2, 3, 4);
 
     EXPECT_TRUE( p2.isEqual( a.multiply(p1) ) );
+}
+
+TEST (MatrixTest, rotationOne) {
+    RotationMatrix half_quarter = RotationMatrix();
+    half_quarter.x_rotation(M_PI/4);
+    
+    RotationMatrix full_quarter = RotationMatrix();
+    full_quarter.x_rotation(M_PI/2);   
+
+    PointMatrix p1 = PointMatrix(0, 1, 0);
+
+    PointMatrix p2 = PointMatrix( 0, ( std::sqrt(2)/2 ), ( std::sqrt(2)/2 ) );
+
+    PointMatrix p3 = PointMatrix(0, 0, 1);
+
+    EXPECT_TRUE( p2.isEqual( half_quarter.multiply(p1) ) );
+
+    EXPECT_TRUE( p3.isEqual( full_quarter.multiply(p1) ) );    
+}
+
+TEST (MatrixTest, rotationTwo) {
+    RotationMatrix half_quarter = RotationMatrix();
+    half_quarter.x_rotation(M_PI/4);
+
+    Matrix inv = half_quarter.inverse();
+
+    PointMatrix p1 = PointMatrix(0, 1, 0);
+
+    PointMatrix p2 = PointMatrix( 0, ( std::sqrt(2)/2 ), -( std::sqrt(2)/2 ) );
+
+    EXPECT_TRUE( p2.isEqual( inv.multiply(p1) ) );
+}
+
+TEST (MatrixTest, rotationThree) {
+    RotationMatrix half_quarter = RotationMatrix();
+    half_quarter.y_rotation(M_PI/4);
+
+    RotationMatrix full_quarter = RotationMatrix();
+    full_quarter.y_rotation(M_PI/2);
+
+    PointMatrix p1 = PointMatrix(0, 0, 1);
+
+    PointMatrix p2 = PointMatrix( ( std::sqrt(2)/2 ), 0, ( std::sqrt(2)/2 ) );
+
+    PointMatrix p3 = PointMatrix( 1, 0, 0);
+
+    EXPECT_TRUE( p2.isEqual( half_quarter.multiply(p1) ) );
+    EXPECT_TRUE( p3.isEqual( full_quarter.multiply(p1) ) );
+}
+
+TEST (MatrixTest, rotationFour) {
+    RotationMatrix half_quarter = RotationMatrix();
+    half_quarter.z_rotation(M_PI/4);
+
+    RotationMatrix full_quarter = RotationMatrix();
+    full_quarter.z_rotation(M_PI/2);
+
+    PointMatrix p1 = PointMatrix(0, 1, 0);
+
+    PointMatrix p2 = PointMatrix( -(std::sqrt(2)/2), (std::sqrt(2)/2), 0);
+
+    PointMatrix p3 = PointMatrix(-1, 0, 0);
+
+    EXPECT_TRUE( p2.isEqual( half_quarter.multiply(p1) ) );
+    EXPECT_TRUE( p3.isEqual( full_quarter.multiply(p1) ) );
 }
