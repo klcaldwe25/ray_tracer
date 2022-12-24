@@ -1,8 +1,9 @@
 #include <iostream>
 #include "projectile.h"
+#include "Clock.h"
 
 int main() {
-    fireProjectile();
+    Clock();
 
     return 0;
 }

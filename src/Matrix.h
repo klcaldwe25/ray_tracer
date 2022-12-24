@@ -4,11 +4,13 @@
 #ifndef RAY_TRACER_MATRIX_H
 #define RAY_TRACER_MATRIX_H
 
+class RotationMatrix;
+
 class Matrix {
     protected:
         int mRows;
         int mCols;
-        std::vector< std::vector<float> > mMatrix;
+        std::vector< std::vector<float> > _matrix;
 
     public:
         Matrix() {}
@@ -22,12 +24,147 @@ class Matrix {
                 for (int j=0; j<cols; j++) {
                     v1.push_back(0.0);
                 }
-                mMatrix.push_back(v1);
+                _matrix.push_back(v1);
             }
         }
 
+        Matrix pointMatrix(float x, float y, float z) {
+            Matrix p = *this;
+
+            p._matrix[0][0] = x;
+            p._matrix[1][0] = y;
+            p._matrix[2][0] = z;
+            p._matrix[3][0] = 1;
+
+            return p;
+        }
+
+        Matrix vectorMatrix(float x, float y, float z) {
+            Matrix p = *this;
+
+            p._matrix[0][0] = x;
+            p._matrix[1][0] = y;
+            p._matrix[2][0] = z;
+            p._matrix[3][1] = 1;
+
+            return p;
+        }
+
+        Matrix identityMatrix() {
+            Matrix p = *this;
+
+            p._matrix[0][0] = 1;
+            p._matrix[1][1] = 1;
+            p._matrix[2][2] = 1;
+            p._matrix[3][3] = 1;
+
+            return p;
+        }
+
+        Matrix translationMatrix(float x, float y, float z) {
+            Matrix p = *this;
+
+            p._matrix[0][0] = 1;
+            p._matrix[1][1] = 1;
+            p._matrix[2][2] = 1;
+            p._matrix[3][3] = 1;
+            p._matrix[0][3] = x;
+            p._matrix[1][3] = y;
+            p._matrix[2][3] = z;
+
+            return p;
+        }
+
+        Matrix scalingMatrix(float x, float y, float z) {
+            Matrix p = *this;
+
+            p._matrix[0][0] = x;
+            p._matrix[1][1] = y;
+            p._matrix[2][2] = z;
+            p._matrix[3][3] = 1;
+
+            return p;           
+        }
+
+        
+        Matrix x_rotation(float r) {
+            Matrix a = *this;
+
+            a._matrix[0][0] = 1;
+            a._matrix[1][1] = cos(r);
+            a._matrix[1][2] = -( sin(r) );
+            a._matrix[2][1] = sin(r);
+            a._matrix[2][2] = cos(r);
+            a._matrix[3][3] = 1;
+
+            return a;
+        }
+
+        Matrix y_rotation(float r) {
+            Matrix a = *this;
+
+            a._matrix[0][0] = cos(r);
+            a._matrix[1][1] = 1;
+            a._matrix[0][2] = sin(r);
+            a._matrix[2][0] = -( sin(r) );
+            a._matrix[2][2] = cos(r);
+            a._matrix[3][3] = 1;
+
+            return a;
+        } 
+
+        Matrix z_rotation(float r) {
+            Matrix a = *this;
+
+            a._matrix[0][0] = cos(r);
+            a._matrix[0][1] = -( sin(r) );
+            a._matrix[1][0] = sin(r) ;
+            a._matrix[1][1] = cos(r);
+            a._matrix[2][2] = 1;
+            a._matrix[3][3] = 1;
+
+            return a;
+        } 
+
+        Matrix shearingMatrix(float xY, float xZ, float yX, float yZ, float zX, float zY) {
+            Matrix a = *this;
+
+            a._matrix[0][0] = 1;
+            a._matrix[0][1] = xY;
+            a._matrix[0][2] = xZ;
+            a._matrix[1][0] = yX;
+            a._matrix[1][1] = 1;
+            a._matrix[1][2] = yZ;
+            a._matrix[2][0] = zX;
+            a._matrix[2][1] = zY;
+            a._matrix[2][2] = 1;
+            a._matrix[3][3] = 1;   
+
+            return a;        
+        }
+
+        Matrix x_rotate(float rad) {
+            return Matrix(4,4).x_rotation(rad).multiply(*this);
+        }
+
+        Matrix y_rotate(float rad) {
+            return Matrix(4,4).y_rotation(rad).multiply(*this);
+        }
+
+        Matrix z_rotate(float rad) {
+            return Matrix(4,4).z_rotation(rad).multiply(*this);
+        }        
+
+        Matrix translate(float x, float y, float z) {
+            return Matrix(4,4).translationMatrix(x, y, z).multiply(*this);
+        }
+
+        Matrix scale (float x, float y, float z) {
+            return Matrix(4,4).scalingMatrix(x, y, z).multiply(*this);
+        }
+
         void setCell(int row, int col, float value) {
-            mMatrix[row][col] = value;
+            _matrix[row][col] = value;
         }
 
         int getRows() {
@@ -39,18 +176,18 @@ class Matrix {
         }
 
         float getCell(int row, int col) {
-            return mMatrix[row][col];
+            return _matrix[row][col];
         }
 
         std::vector< std::vector<float> > getMatrix() {
-            return mMatrix;
+            return _matrix;
         }
 
         bool isEqual(Matrix a) {
 
             for (int i=0; i<mRows; i++) {
                 for (int j=0; j<mCols; j++) {
-                    if (equal(mMatrix[i][j], a.getCell(i, j)) == false) {
+                    if (equal(_matrix[i][j], a.getCell(i, j)) == false) {
                         return false;
                     }
                 }
@@ -67,7 +204,7 @@ class Matrix {
                 for (int j=0; j<b.getCols(); j++) {
                     value = 0;
                     for (int k=0; k<mCols; k++) {
-                        value += (mMatrix[i][k] * b.getCell(k, j));
+                        value += (_matrix[i][k] * b.getCell(k, j));
                     }
                     c.setCell(i, j, value);
                 }
@@ -81,7 +218,7 @@ class Matrix {
 
             for (int i=0; i<mRows; i++) {
                 for (int j=0; j<mCols; j++) {
-                    a.setCell(i, j, mMatrix[j][i]);
+                    a.setCell(i, j, _matrix[j][i]);
                 }
             }
 
@@ -90,13 +227,13 @@ class Matrix {
 
         float determinant() {
             if (mRows == 2 && mCols == 2) {
-                return (mMatrix[0][0] * mMatrix[1][1]) - (mMatrix[0][1] * mMatrix[1][0]);
+                return (_matrix[0][0] * _matrix[1][1]) - (_matrix[0][1] * _matrix[1][0]);
             }
 
             float det = 0;
 
             for (int i=0; i<mCols; i++) {
-                det += mMatrix[0][i] * cofactor(0, i);
+                det += _matrix[0][i] * cofactor(0, i);
             }
 
             return det;
@@ -111,7 +248,7 @@ class Matrix {
                 if (i != row) {
                     for (int j=0; j<mCols; j++) {
                         if (j != col) {
-                            a.setCell(row1, col1, mMatrix[i][j]);
+                            a.setCell(row1, col1, _matrix[i][j]);
                             col1++;
                         }
                     }
@@ -175,138 +312,6 @@ class Matrix {
                 return false;
             }
         }        
-};
-
-class PointMatrix : public Matrix {
-    public:
-        PointMatrix(float x, float y, float z) {
-            mRows = 4;
-            mCols = 1;
-
-            mMatrix.push_back({x});
-            mMatrix.push_back({y});
-            mMatrix.push_back({z});
-            mMatrix.push_back({1});            
-        }
-};
-
-class VectorMatrix : public Matrix {
-    public:
-        VectorMatrix(float x, float y, float z) {
-            mRows = 4;
-            mCols = 1;
-
-            mMatrix.push_back({x});
-            mMatrix.push_back({y});
-            mMatrix.push_back({z});
-            mMatrix.push_back({0});            
-        }
-};
-
-class IdentityMatrix : public Matrix { 
-    public:
-        IdentityMatrix() {
-            mRows = 4;
-            mCols = 4;
-
-            for (int i=0; i<4; i++) {
-                std::vector<float> v1;
-                for (int j=0; j<4; j++) {
-                    if (i == j) {
-                        v1.push_back(1);
-                    } else {
-                        v1.push_back(0);
-                    }
-                }
-                mMatrix.push_back(v1);
-            }
-        }
-    
-        Matrix iMultiply (Matrix a) {
-            return a;
-        }
-};
-
-class TranslationMatrix : public Matrix {
-    public:
-        TranslationMatrix(float x, float y, float z) {
-            mRows = 4;
-            mCols = 4;
-
-            mMatrix.push_back({1, 0, 0, x});
-            mMatrix.push_back({0, 1, 0, y});
-            mMatrix.push_back({0, 0, 1, z});
-            mMatrix.push_back({0, 0, 0, 1});
-
-        }
-};
-
-class ScalingMatrix : public Matrix {
-    public:
-        ScalingMatrix(float x, float y, float z) {
-            mRows = 4;
-            mCols = 4;
-
-            mMatrix.push_back({x, 0, 0, 0});
-            mMatrix.push_back({0, y, 0, 0});
-            mMatrix.push_back({0, 0, z, 0});
-            mMatrix.push_back({0, 0, 0, 1});
-
-        }
-};
-
-class RotationMatrix : public Matrix {
-    public:
-        RotationMatrix() {
-            mRows = 4;
-            mCols = 4;
-
-            for (int i=0; i<mRows; i++) {
-                std::vector<float> v1;
-                for (int j=0; j<mCols; j++) {
-                    if (i == j) {
-                        v1.push_back(1);
-                    } else {
-                        v1.push_back(0);
-                    }
-                }
-                mMatrix.push_back(v1);
-            }      
-        }
-
-        void x_rotation(float r) {
-            mMatrix[1][1] = cos(r);
-            mMatrix[1][2] = -( sin(r) );
-            mMatrix[2][1] = sin(r);
-            mMatrix[2][2] = cos(r);
-        }
-
-        void y_rotation(float r) {
-            mMatrix[0][0] = cos(r);
-            mMatrix[0][2] = sin(r);
-            mMatrix[2][0] = -( sin(r) );
-            mMatrix[2][2] = cos(r);
-        }        
-
-        void z_rotation(float r) {
-            mMatrix[0][0] = cos(r);
-            mMatrix[0][1] = -( sin(r) );
-            mMatrix[1][0] = sin(r) ;
-            mMatrix[1][1] = cos(r);
-        } 
-};
-
-class ShearingMatrix : public Matrix {
-    public:
-        ShearingMatrix(float xY, float xZ, float yX, float yZ, float zX, float zY) {
-            mRows = 4;
-            mCols = 4;
-
-            mMatrix.push_back({1, xY, xZ, 0});
-            mMatrix.push_back({yX, 1, yZ, 0});
-            mMatrix.push_back({zX, zY, 1, 0});
-            mMatrix.push_back({0, 0, 0, 1});            
-        }
 };
 
 #endif
