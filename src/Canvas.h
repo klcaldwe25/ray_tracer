@@ -7,16 +7,16 @@
 
 class Canvas {
     protected:
-        int _width;
-        int _height;
-        std::vector< std::vector<Color> > _grid;
+        int mWidth;
+        int mHeight;
+        std::vector< std::vector<Color> > mGrid;
     
     public:
         Canvas(){}
 
         Canvas(int width, int height, Color color) {
-            _width = width;
-            _height = height;
+            mWidth = width;
+            mHeight = height;
             for(int i=0; i<height; i++) {
                 std::vector<Color> col;
 
@@ -24,55 +24,55 @@ class Canvas {
                     col.push_back(color);
                 }
 
-                _grid.push_back(col);
+                mGrid.push_back(col);
             }
         }
 
         void setWidth(int width) {
-            _width = width;
+            mWidth = width;
         }
 
         void setHeight(int height) {
-            _height = height;
+            mHeight = height;
         }
 
         void setPixel(int col, int row, Color color) {
-            _grid[row][col] = color;
+            mGrid[row][col] = color;
         }
 
         float getWidth() {
-            return _width;
+            return mWidth;
         }
 
         float getHeight() {
-            return _height;
+            return mHeight;
         }
 
         std::vector< std::vector<Color> > getGrid() {
-            return _grid;
+            return mGrid;
         }
 
         Color getPixel(int col, int row) {
-            return _grid[row][col];
+            return mGrid[row][col];
         }
 
         void printPixel(int row, int col) {
-            std::cout << "( " << _grid[row][col].getRed() << ", " << _grid[row][col].getGreen() << ", " << _grid[row][col].getBlue() << " )\n";
+            std::cout << "( " << mGrid[row][col].getRed() << ", " << mGrid[row][col].getGreen() << ", " << mGrid[row][col].getBlue() << " )\n";
         }
 
         std::string to_ppm() {
             std::string value;
             std::string line;
 
-            std::string ppm_string = "P3\n" + std::to_string(_width) + " " + std::to_string(_height) + "\n255\n";  
+            std::string ppm_string = "P3\n" + std::to_string(mWidth) + " " + std::to_string(mHeight) + "\n255\n";  
 
-            for (int row=0; row<_height; row++) {
+            for (int row=0; row<mHeight; row++) {
                 line = "";
-                for (int col=0; col<_width; col++) {
+                for (int col=0; col<mWidth; col++) {
                     std::vector<float> colors;
-                    colors.push_back(_grid[row][col].getRed());
-                    colors.push_back(_grid[row][col].getGreen());
-                    colors.push_back(_grid[row][col].getBlue());
+                    colors.push_back(mGrid[row][col].getRed());
+                    colors.push_back(mGrid[row][col].getGreen());
+                    colors.push_back(mGrid[row][col].getBlue());
                     for (float color : colors) {
                         if (color < 0) {
                             value = "0 ";

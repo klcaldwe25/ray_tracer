@@ -1424,7 +1424,11 @@ tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.o: /Users/kylecaldwell/ray_tra
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest-typed-test.h \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest_pred_impl.h \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest_prod.h \
-  /Users/kylecaldwell/ray_tracer/src/Matrix.h
+  /Users/kylecaldwell/ray_tracer/src/Matrix.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/Tuple.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath
 
 tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest.h \

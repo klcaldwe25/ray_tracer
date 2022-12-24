@@ -13,10 +13,6 @@ TEST(CanvasTest, getPixel) {
     Canvas a = Canvas(2,2, Color(0, 0, 0));
     Color color1 = a.getPixel(1,1);
 
-    a.printPixel(1, 1);
-
-    std::cout << color1.getGreen() << "\n";
-
     EXPECT_TRUE(a.equal(color1.getRed(), 0));
     EXPECT_TRUE(a.equal(color1.getGreen(), 0));
     EXPECT_TRUE(a.equal(color1.getBlue(), 0));        

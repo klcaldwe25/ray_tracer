@@ -5,29 +5,29 @@
 
 class Color {
     protected:
-        float _red;
-        float _green;
-        float _blue;
+        float mRed;
+        float mGreen;
+        float mBlue;
     
     public:
         Color(){}
 
         Color(float red, float green, float blue) {
-            _red = red;
-            _green = green;
-            _blue = blue;
+            mRed = red;
+            mGreen = green;
+            mBlue = blue;
         }
 
         float getRed() {
-            return _red;
+            return mRed;
         }
 
         float getGreen() {
-            return _green;
+            return mGreen;
         }
 
         float getBlue() {
-            return _blue;
+            return mBlue;
         }
 
         bool equal(float a, float b) {
