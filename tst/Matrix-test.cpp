@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "Matrix.h"
 #include "Tuple.h"
-#include <math.h>
+#include <cmath>
 
 TEST(MatrixTest, getCell) {
     Matrix a = Matrix(2, 2);

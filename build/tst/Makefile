@@ -223,6 +223,54 @@ Color-test.cpp.s:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Color-test.cpp.s
 .PHONY : Color-test.cpp.s
 
+Intersection-test.o: Intersection-test.cpp.o
+.PHONY : Intersection-test.o
+
+# target to build an object file
+Intersection-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Intersection-test.cpp.o
+.PHONY : Intersection-test.cpp.o
+
+Intersection-test.i: Intersection-test.cpp.i
+.PHONY : Intersection-test.i
+
+# target to preprocess a source file
+Intersection-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Intersection-test.cpp.i
+.PHONY : Intersection-test.cpp.i
+
+Intersection-test.s: Intersection-test.cpp.s
+.PHONY : Intersection-test.s
+
+# target to generate assembly for a file
+Intersection-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Intersection-test.cpp.s
+.PHONY : Intersection-test.cpp.s
+
+Intersections-test.o: Intersections-test.cpp.o
+.PHONY : Intersections-test.o
+
+# target to build an object file
+Intersections-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.o
+.PHONY : Intersections-test.cpp.o
+
+Intersections-test.i: Intersections-test.cpp.i
+.PHONY : Intersections-test.i
+
+# target to preprocess a source file
+Intersections-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.i
+.PHONY : Intersections-test.cpp.i
+
+Intersections-test.s: Intersections-test.cpp.s
+.PHONY : Intersections-test.s
+
+# target to generate assembly for a file
+Intersections-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.s
+.PHONY : Intersections-test.cpp.s
+
 Matrix-test.o: Matrix-test.cpp.o
 .PHONY : Matrix-test.o
 
@@ -246,6 +294,30 @@ Matrix-test.s: Matrix-test.cpp.s
 Matrix-test.cpp.s:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.s
 .PHONY : Matrix-test.cpp.s
+
+Ray-test.o: Ray-test.cpp.o
+.PHONY : Ray-test.o
+
+# target to build an object file
+Ray-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.o
+.PHONY : Ray-test.cpp.o
+
+Ray-test.i: Ray-test.cpp.i
+.PHONY : Ray-test.i
+
+# target to preprocess a source file
+Ray-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.i
+.PHONY : Ray-test.cpp.i
+
+Ray-test.s: Ray-test.cpp.s
+.PHONY : Ray-test.s
+
+# target to generate assembly for a file
+Ray-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.s
+.PHONY : Ray-test.cpp.s
 
 Tuple-test.o: Tuple-test.cpp.o
 .PHONY : Tuple-test.o
@@ -314,9 +386,18 @@ help:
 	@echo "... Color-test.o"
 	@echo "... Color-test.i"
 	@echo "... Color-test.s"
+	@echo "... Intersection-test.o"
+	@echo "... Intersection-test.i"
+	@echo "... Intersection-test.s"
+	@echo "... Intersections-test.o"
+	@echo "... Intersections-test.i"
+	@echo "... Intersections-test.s"
 	@echo "... Matrix-test.o"
 	@echo "... Matrix-test.i"
 	@echo "... Matrix-test.s"
+	@echo "... Ray-test.o"
+	@echo "... Ray-test.i"
+	@echo "... Ray-test.s"
 	@echo "... Tuple-test.o"
 	@echo "... Tuple-test.i"
 	@echo "... Tuple-test.s"

@@ -1,10 +1,8 @@
 #include <vector>
-#include <math.h>
+#include <cmath>
 
 #ifndef RAY_TRACER_MATRIX_H
 #define RAY_TRACER_MATRIX_H
-
-class RotationMatrix;
 
 class Matrix {
     protected:
@@ -13,6 +11,7 @@ class Matrix {
         std::vector< std::vector<float> > _matrix;
 
     public:
+        // GETTERS / SETTERS
         Matrix() {}
 
         Matrix(int rows, int cols) {
@@ -28,6 +27,69 @@ class Matrix {
             }
         }
 
+        void setCell(int row, int col, float value) {
+            _matrix[row][col] = value;
+        }
+
+        int getRows() {
+            return mRows;
+        }
+
+        int getCols() {
+            return mCols;
+        }
+
+        float getCell(int row, int col) {
+            return _matrix[row][col];
+        }
+
+        std::vector< std::vector<float> > getMatrix() {
+            return _matrix;
+        }
+
+        // BASIC MATRIC ACTIONS
+        bool isEqual(Matrix a) {
+
+            for (int i=0; i<mRows; i++) {
+                for (int j=0; j<mCols; j++) {
+                    if (equal(_matrix[i][j], a.getCell(i, j)) == false) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        bool equal(float a, float b) {
+
+            float EPSILON = 0.00001;
+
+            if (std::abs(a - b) < EPSILON) {
+                return true;
+            } else {
+                return false;
+            }
+        }   
+        
+        Matrix multiply(Matrix b) {
+
+            Matrix c = Matrix(b.getRows(), b.getCols());
+            float value = 0;
+
+            for (int i=0; i<mRows; i++) {
+                for (int j=0; j<b.getCols(); j++) {
+                    value = 0;
+                    for (int k=0; k<mCols; k++) {
+                        value += (_matrix[i][k] * b.getCell(k, j));
+                    }
+                    c.setCell(i, j, value);
+                }
+            } 
+
+            return c;
+        } 
+
+        // POINT
         Matrix pointMatrix(float x, float y, float z) {
             Matrix p = *this;
 
@@ -39,6 +101,7 @@ class Matrix {
             return p;
         }
 
+        // VECTOR
         Matrix vectorMatrix(float x, float y, float z) {
             Matrix p = *this;
 
@@ -50,6 +113,105 @@ class Matrix {
             return p;
         }
 
+        Matrix add(Matrix b) {
+            Matrix a = *this;
+
+            a._matrix[0][0] += b.getCell(0, 0);
+            a._matrix[1][0] += b.getCell(1, 0);
+            a._matrix[2][0] += b.getCell(2, 0);
+            a._matrix[3][0] += b.getCell(3, 0);
+
+            return a;
+        }
+
+        Matrix subtract(Matrix b) {
+            Matrix a = *this;
+
+            a._matrix[0][0] -= b.getCell(0, 0);
+            a._matrix[1][0] -= b.getCell(1, 0);
+            a._matrix[2][0] -= b.getCell(2, 0);
+            a._matrix[3][0] -= b.getCell(3, 0);
+
+            return a;
+        }    
+
+        Matrix negate() {
+            Matrix a = *this;
+
+            a._matrix[0][0] = 0 - a.getCell(0, 0);
+            a._matrix[1][0] = 0 - a.getCell(1, 0);
+            a._matrix[2][0] = 0 - a.getCell(2, 0);
+            a._matrix[3][0] = 0 - a.getCell(3, 0);
+
+            return a;
+        }   
+
+        Matrix multiplyScalar(float b) {
+            Matrix a = *this;
+            
+            a._matrix[0][0] *= b;
+            a._matrix[1][0] *= b;
+            a._matrix[2][0] *= b;
+            a._matrix[3][0] *= b;
+
+            return a;
+        }          
+
+        Matrix divideScalar(float b) {
+            Matrix a = *this;
+            
+            a._matrix[0][0] /= b;
+            a._matrix[1][0] /= b;
+            a._matrix[2][0] /= b;
+            a._matrix[3][0] /= b;
+
+            return a;
+        } 
+
+        float magnitude() {
+            Matrix a = *this;
+
+            return std::sqrt( 
+                std::pow(a._matrix[0][0], 2.0) + 
+                std::pow(a._matrix[1][0], 2.0) + 
+                std::pow(a._matrix[2][0], 2.0) 
+            );
+        }
+
+        Matrix normalize() {
+            Matrix a = *this;
+            
+            a._matrix[0][0] /= a.magnitude();
+            a._matrix[1][0] /= a.magnitude();
+            a._matrix[2][0] /= a.magnitude();
+            a._matrix[3][0] /= a.magnitude();
+
+            return a;            
+        }
+
+        float dot(Matrix b) {
+            Matrix a = *this;
+
+            return ( 
+                (a._matrix[0][0] * b.getCell(0,0)) +
+                (a._matrix[1][0] * b.getCell(1,0)) +
+                (a._matrix[2][0] * b.getCell(2,0)) +
+                (a._matrix[3][0] * b.getCell(3,0))
+            );             
+        }
+
+        Matrix cross(Matrix b) {
+            Matrix a = *this;
+
+            a._matrix[0][0] = ((a._matrix[1][0] * b.getCell(2,0)) - (a._matrix[2][0] * b.getCell(1,0)));
+            a._matrix[1][0] = ((a._matrix[2][0] * b.getCell(0,0)) - (a._matrix[0][0] * b.getCell(2,0)));
+            a._matrix[2][0] = ((a._matrix[0][0] * b.getCell(1,0)) - (a._matrix[1][0] * b.getCell(0,0)));
+            a._matrix[3][0] = 0;
+
+            return a;
+        }
+
+        // IDENTITY
         Matrix identityMatrix() {
             Matrix p = *this;
 
@@ -61,6 +223,7 @@ class Matrix {
             return p;
         }
 
+        // TRANSLATE
         Matrix translationMatrix(float x, float y, float z) {
             Matrix p = *this;
 
@@ -75,6 +238,11 @@ class Matrix {
             return p;
         }
 
+        Matrix translate(float x, float y, float z) {
+            return Matrix(4,4).translationMatrix(x, y, z).multiply(*this);
+        }
+
+        // SCALE
         Matrix scalingMatrix(float x, float y, float z) {
             Matrix p = *this;
 
@@ -86,7 +254,11 @@ class Matrix {
             return p;           
         }
 
-        
+        Matrix scale (float x, float y, float z) {
+            return Matrix(4,4).scalingMatrix(x, y, z).multiply(*this);
+        }
+
+        // ROTATE        
         Matrix x_rotation(float r) {
             Matrix a = *this;
 
@@ -126,6 +298,19 @@ class Matrix {
             return a;
         } 
 
+        Matrix x_rotate(float rad) {
+            return Matrix(4,4).x_rotation(rad).multiply(*this);
+        }
+
+        Matrix y_rotate(float rad) {
+            return Matrix(4,4).y_rotation(rad).multiply(*this);
+        }
+
+        Matrix z_rotate(float rad) {
+            return Matrix(4,4).z_rotation(rad).multiply(*this);
+        }  
+
+        // SHEARING
         Matrix shearingMatrix(float xY, float xZ, float yX, float yZ, float zX, float zY) {
             Matrix a = *this;
 
@@ -141,78 +326,9 @@ class Matrix {
             a._matrix[3][3] = 1;   
 
             return a;        
-        }
+        }      
 
-        Matrix x_rotate(float rad) {
-            return Matrix(4,4).x_rotation(rad).multiply(*this);
-        }
-
-        Matrix y_rotate(float rad) {
-            return Matrix(4,4).y_rotation(rad).multiply(*this);
-        }
-
-        Matrix z_rotate(float rad) {
-            return Matrix(4,4).z_rotation(rad).multiply(*this);
-        }        
-
-        Matrix translate(float x, float y, float z) {
-            return Matrix(4,4).translationMatrix(x, y, z).multiply(*this);
-        }
-
-        Matrix scale (float x, float y, float z) {
-            return Matrix(4,4).scalingMatrix(x, y, z).multiply(*this);
-        }
-
-        void setCell(int row, int col, float value) {
-            _matrix[row][col] = value;
-        }
-
-        int getRows() {
-            return mRows;
-        }
-
-        int getCols() {
-            return mCols;
-        }
-
-        float getCell(int row, int col) {
-            return _matrix[row][col];
-        }
-
-        std::vector< std::vector<float> > getMatrix() {
-            return _matrix;
-        }
-
-        bool isEqual(Matrix a) {
-
-            for (int i=0; i<mRows; i++) {
-                for (int j=0; j<mCols; j++) {
-                    if (equal(_matrix[i][j], a.getCell(i, j)) == false) {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-
-        Matrix multiply(Matrix b) {
-
-            Matrix c = Matrix(b.getRows(), b.getCols());
-            float value = 0;
-
-            for (int i=0; i<mRows; i++) {
-                for (int j=0; j<b.getCols(); j++) {
-                    value = 0;
-                    for (int k=0; k<mCols; k++) {
-                        value += (_matrix[i][k] * b.getCell(k, j));
-                    }
-                    c.setCell(i, j, value);
-                }
-            } 
-
-            return c;
-        } 
-
+        // TRANSPOSE
         Matrix transpose() {
             Matrix a = Matrix(mRows, mCols);
 
@@ -223,6 +339,35 @@ class Matrix {
             }
 
             return a;
+        }
+
+        // INVERSE ACTIONS
+        Matrix inverse() {
+            if (!invertible()) {
+                throw std::invalid_argument("Not invertible");
+            }
+
+            Matrix a = Matrix(mRows, mCols);
+
+            float det = determinant();
+            float c = 0;
+
+            for (int i=0; i<mRows; i++) {
+                for (int j=0; j<mCols; j++) {
+                    c = cofactor(i, j);
+                    a.setCell(j, i, (c/det) );
+                }
+            }
+
+            return a;
+        }
+
+        bool invertible() {
+            if (determinant() != 0) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
         float determinant() {
@@ -272,46 +417,7 @@ class Matrix {
             }
 
             return minor;
-        }
-
-        bool invertible() {
-            if (determinant() != 0) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        Matrix inverse() {
-            if (!invertible()) {
-                throw std::invalid_argument("Not invertible");
-            }
-
-            Matrix a = Matrix(mRows, mCols);
-
-            float det = determinant();
-            float c = 0;
-
-            for (int i=0; i<mRows; i++) {
-                for (int j=0; j<mCols; j++) {
-                    c = cofactor(i, j);
-                    a.setCell(j, i, (c/det) );
-                }
-            }
-
-            return a;
-        }
-
-        bool equal(float a, float b) {
-
-            float EPSILON = 0.00001;
-
-            if (std::abs(a - b) < EPSILON) {
-                return true;
-            } else {
-                return false;
-            }
-        }        
+        }     
 };
 
 #endif

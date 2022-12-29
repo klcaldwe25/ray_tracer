@@ -1,5 +1,5 @@
-tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.o: \
-  /Users/kylecaldwell/ray_tracer/tst/Matrix-test.cpp \
+tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.o: \
+  /Users/kylecaldwell/ray_tracer/tst/Ray-test.cpp \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cstddef \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__config \
@@ -469,8 +469,8 @@ tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.o: \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest-typed-test.h \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest_pred_impl.h \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest_prod.h \
+  /Users/kylecaldwell/ray_tracer/src/Ray.h \
   /Users/kylecaldwell/ray_tracer/src/Matrix.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
-  /Users/kylecaldwell/ray_tracer/src/Tuple.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h
