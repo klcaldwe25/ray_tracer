@@ -1,4 +1,6 @@
 #include "Intersection.h"
+#include <algorithm>
+#include <limits>
 
 #ifndef RAY_TRACER_INTERSECTIONS_H
 #define RAY_TRACER_INTERSECTIONS_H
@@ -16,7 +18,20 @@ class Intersections {
 
         std::vector<Intersection> getIntersections() {
             return mIntersections;
-        }  
+        }
+
+        Intersection hit() {
+
+            Intersection intersection = Intersection(std::numeric_limits<float>::max(), Shape());
+
+            for (auto i : mIntersections) {
+                if (i.getT() > 0 && i.getT() < intersection.getT()) {
+                    intersection.setT(i.getT());
+                }
+            }
+
+            return intersection;
+        }
 
         Intersections intersectSphere(Ray r, Shape s) {
             Intersections intersections = Intersections();

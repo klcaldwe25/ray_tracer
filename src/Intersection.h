@@ -16,6 +16,10 @@ class Intersection {
             mObject = object;
         }
 
+        void setT(float t) {
+            mT = t;
+        }
+
         float getT () {
             return mT;
         }
@@ -23,6 +27,7 @@ class Intersection {
         Shape getObject() {
             return mObject;
         }
+
 };
 
 #endif
