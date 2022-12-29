@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.o.d"
   "CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.o"
   "CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.o.d"
+  "CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.o"
+  "CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.o.d"
   "CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o"
   "CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o.d"
   "CMakeFiles/ray_tracer_tst.dir/main.cpp.o"

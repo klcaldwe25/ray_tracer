@@ -1,6 +1,5 @@
 #include "Ray.h"
 #include "Matrix.h"
-//#include "Intersection.h"
 #include <cmath>
 
 #ifndef RAY_TRACER_SPHERE_H
@@ -9,6 +8,7 @@
 class Shape {
     protected:
         Matrix mOrigin;
+        Matrix mTransform = Matrix(4,4).identityMatrix();
 
     public:
         Shape(){}
@@ -22,6 +22,15 @@ class Shape {
         Matrix getOrigin() {
             return mOrigin;
         }
+
+        void setTransform(Matrix t) {
+            mTransform = t;
+        }
+
+        Matrix getTransform() {
+            return mTransform;
+        }
+
  };
 
 #endif

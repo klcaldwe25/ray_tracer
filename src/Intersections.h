@@ -36,10 +36,12 @@ class Intersections {
         Intersections intersectSphere(Ray r, Shape s) {
             Intersections intersections = Intersections();
 
-            Matrix sphere_to_ray = r.getOrigin().subtract(s.getOrigin());
+            Ray r2 = r.transform(s.getTransform().inverse());
 
-            float a = r.getDirection().dot(r.getDirection());
-            float b = 2 * r.getDirection().dot(sphere_to_ray);
+            Matrix sphere_to_ray = r2.getOrigin().subtract(s.getOrigin());
+
+            float a = r2.getDirection().dot(r2.getDirection());
+            float b = 2 * r2.getDirection().dot(sphere_to_ray);
             float c = sphere_to_ray.dot(sphere_to_ray) - 1;
             float discriminant =  std::pow(b, 2.0) - (4 * a * c);
 

@@ -23,9 +23,11 @@ class Ray {
         }
 
         Matrix position (float t) {
-            Ray a = *this;
+            return this->mOrigin.add( ( this->mDirection.multiplyScalar(t) ) );
+        }
 
-            return a.mOrigin.add( ( a.mDirection.multiplyScalar(t) ) );
+        Ray transform (Matrix m) {
+            return Ray(m.multiply(this->mOrigin), m.multiply(this->mDirection));
         }
 };
 

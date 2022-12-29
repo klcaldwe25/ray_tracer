@@ -319,6 +319,30 @@ Ray-test.cpp.s:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.s
 .PHONY : Ray-test.cpp.s
 
+Shape-test.o: Shape-test.cpp.o
+.PHONY : Shape-test.o
+
+# target to build an object file
+Shape-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.o
+.PHONY : Shape-test.cpp.o
+
+Shape-test.i: Shape-test.cpp.i
+.PHONY : Shape-test.i
+
+# target to preprocess a source file
+Shape-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.i
+.PHONY : Shape-test.cpp.i
+
+Shape-test.s: Shape-test.cpp.s
+.PHONY : Shape-test.s
+
+# target to generate assembly for a file
+Shape-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.s
+.PHONY : Shape-test.cpp.s
+
 Tuple-test.o: Tuple-test.cpp.o
 .PHONY : Tuple-test.o
 
@@ -398,6 +422,9 @@ help:
 	@echo "... Ray-test.o"
 	@echo "... Ray-test.i"
 	@echo "... Ray-test.s"
+	@echo "... Shape-test.o"
+	@echo "... Shape-test.i"
+	@echo "... Shape-test.s"
 	@echo "... Tuple-test.o"
 	@echo "... Tuple-test.i"
 	@echo "... Tuple-test.s"

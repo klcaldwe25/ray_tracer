@@ -117,3 +117,24 @@ TEST (IntersectionsTest, intersectTen) {
     EXPECT_EQ(i.getT(), 2);
 }
 
+TEST (IntersectionsTest, intersectEleven) {
+    Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));    
+    Shape s = Shape().sphereShape();
+    s.setTransform(Matrix(4,4).scalingMatrix(2,2,2));
+
+    Intersections xs = Intersections().intersectSphere(r, s);
+
+    EXPECT_EQ(xs.getIntersections().size(), 2);
+    EXPECT_EQ(xs.getIntersections()[0].getT(), 3);
+    EXPECT_EQ(xs.getIntersections()[1].getT(), 7);     
+}
+
+TEST (IntersectionsTest, intersectTwelve) {
+    Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));    
+    Shape s = Shape().sphereShape();
+    s.setTransform(Matrix(4,4).translationMatrix(5,0,0));
+
+    Intersections xs = Intersections().intersectSphere(r, s);
+
+    EXPECT_EQ(xs.getIntersections().size(), 0);   
+}
