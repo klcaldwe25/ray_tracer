@@ -56,10 +56,6 @@ class Canvas {
             return mGrid[row][col];
         }
 
-        void printPixel(int row, int col) {
-            std::cout << "( " << mGrid[row][col].getRed() << ", " << mGrid[row][col].getGreen() << ", " << mGrid[row][col].getBlue() << " )\n";
-        }
-
         std::string to_ppm() {
             std::string value;
             std::string line;

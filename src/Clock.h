@@ -35,7 +35,7 @@ class Clock {
             std::string ppm_str = canvas.to_ppm();
 
             std::ofstream file;
-            file.open("cannon.ppm", std::ios::out);
+            file.open("clock.ppm", std::ios::out);
 
             file << ppm_str;
 

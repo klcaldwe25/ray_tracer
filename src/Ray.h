@@ -14,6 +14,14 @@ class Ray {
             mDirection = direction;
         }
 
+        void setOrigin (Matrix origin) {
+            mOrigin = origin;
+        }
+
+        void setDirection (Matrix direction) {
+            mDirection = direction;
+        }
+
         Matrix getOrigin() {
             return mOrigin;
         }

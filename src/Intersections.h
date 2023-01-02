@@ -24,7 +24,7 @@ class Intersections {
 
             Intersection intersection = Intersection(std::numeric_limits<float>::max(), Shape());
 
-            for (auto i : mIntersections) {
+            for (auto i : this->mIntersections) {
                 if (i.getT() > 0 && i.getT() < intersection.getT()) {
                     intersection.setT(i.getT());
                 }
