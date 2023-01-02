@@ -432,8 +432,19 @@ src/CMakeFiles/ray_tracer_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/deque \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iomanip \
   /Users/kylecaldwell/ray_tracer/src/Clock.h \
-  /Users/kylecaldwell/ray_tracer/src/Matrix.h
+  /Users/kylecaldwell/ray_tracer/src/Matrix.h \
+  /Users/kylecaldwell/ray_tracer/src/Circle.h \
+  /Users/kylecaldwell/ray_tracer/src/Shape.h \
+  /Users/kylecaldwell/ray_tracer/src/Ray.h \
+  /Users/kylecaldwell/ray_tracer/src/Intersections.h \
+  /Users/kylecaldwell/ray_tracer/src/Intersection.h
 
+
+/Users/kylecaldwell/ray_tracer/src/Intersection.h:
+
+/Users/kylecaldwell/ray_tracer/src/Ray.h:
+
+/Users/kylecaldwell/ray_tracer/src/Circle.h:
 
 /Users/kylecaldwell/ray_tracer/src/Matrix.h:
 
@@ -760,6 +771,8 @@ src/CMakeFiles/ray_tracer_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/sys/_types/_clock_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__iterator/concepts.h:
+
+/Users/kylecaldwell/ray_tracer/src/Intersections.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/is_sorted.h:
 
@@ -1204,6 +1217,8 @@ src/CMakeFiles/ray_tracer_run.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/for_each_n.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/nl_types.h:
+
+/Users/kylecaldwell/ray_tracer/src/Shape.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
 
