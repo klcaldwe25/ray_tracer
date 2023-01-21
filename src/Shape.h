@@ -14,9 +14,8 @@ class Shape {
         Shape(){}
 
         Shape sphereShape() {
-            Shape s = *this;
-            s.mOrigin = Matrix(4,1).pointMatrix(0, 0, 0);
-            return s;
+            this->mOrigin = Matrix(4,1).pointMatrix(0, 0, 0);
+            return *this;
         }
 
         Matrix getOrigin() {
@@ -29,6 +28,19 @@ class Shape {
 
         Matrix getTransform() {
             return mTransform;
+        }
+
+        Matrix normal_at(Matrix world_point) {
+ 
+
+            Matrix object_point = mTransform.inverse().multiply(world_point);
+            Matrix object_normal = object_point.subtract(Matrix(4,1).pointMatrix(0,0,0));
+            Matrix world_normal = mTransform.inverse().transpose().multiply(object_normal);
+
+            world_normal.setCell(3,0,0);           
+
+            return world_normal.normalize();
+     
         }
 
  };
