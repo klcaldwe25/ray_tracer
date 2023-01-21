@@ -12,7 +12,7 @@
 
 class Circle {
     private:
-        Matrix ray_origin = Matrix(4,4).pointMatrix(0, 0, -5);
+        Matrix ray_origin = Matrix(4,4).pointMatrix(0, 0, -10);
         float wall_z = 10;
         float wall_size = 7;
         int canvas_pixels = 500;

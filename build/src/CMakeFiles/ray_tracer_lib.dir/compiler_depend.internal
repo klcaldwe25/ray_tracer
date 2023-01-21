@@ -434,4 +434,9 @@ src/CMakeFiles/ray_tracer_lib.dir/main.cpp.o
  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/iomanip
  /Users/kylecaldwell/ray_tracer/src/Clock.h
  /Users/kylecaldwell/ray_tracer/src/Matrix.h
+ /Users/kylecaldwell/ray_tracer/src/Circle.h
+ /Users/kylecaldwell/ray_tracer/src/Shape.h
+ /Users/kylecaldwell/ray_tracer/src/Ray.h
+ /Users/kylecaldwell/ray_tracer/src/Intersections.h
+ /Users/kylecaldwell/ray_tracer/src/Intersection.h
 

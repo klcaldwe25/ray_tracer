@@ -180,11 +180,13 @@ class Matrix {
 
         Matrix normalize() {
             Matrix a = *this;
+
+            float magnitude = a.magnitude();
             
-            a._matrix[0][0] /= a.magnitude();
-            a._matrix[1][0] /= a.magnitude();
-            a._matrix[2][0] /= a.magnitude();
-            a._matrix[3][0] /= a.magnitude();
+            a._matrix[0][0] /= magnitude;
+            a._matrix[1][0] /= magnitude;
+            a._matrix[2][0] /= magnitude;
+            a._matrix[3][0] /= magnitude;
 
             return a;            
         }
@@ -343,17 +345,17 @@ class Matrix {
 
         // INVERSE ACTIONS
         Matrix inverse() {
-            if (!invertible()) {
+            Matrix a = *this;     
+
+            if (!a.invertible()) {
                 throw std::invalid_argument("Not invertible");
             }
 
-            Matrix a = Matrix(mRows, mCols);
-
-            float det = determinant();
+            float det = a.determinant();
             float c = 0;
 
-            for (int i=0; i<mRows; i++) {
-                for (int j=0; j<mCols; j++) {
+            for (int i=0; i<a.mRows; i++) {
+                for (int j=0; j<a.mCols; j++) {
                     c = cofactor(i, j);
                     a.setCell(j, i, (c/det) );
                 }
@@ -363,7 +365,7 @@ class Matrix {
         }
 
         bool invertible() {
-            if (determinant() != 0) {
+            if (this->determinant() != 0) {
                 return true;
             } else {
                 return false;
@@ -372,13 +374,13 @@ class Matrix {
 
         float determinant() {
             if (mRows == 2 && mCols == 2) {
-                return (_matrix[0][0] * _matrix[1][1]) - (_matrix[0][1] * _matrix[1][0]);
+                return (this->_matrix[0][0] * this->_matrix[1][1]) - (this->_matrix[0][1] * this->_matrix[1][0]);
             }
 
             float det = 0;
 
-            for (int i=0; i<mCols; i++) {
-                det += _matrix[0][i] * cofactor(0, i);
+            for (int i=0; i<this->mCols; i++) {
+                det += this->_matrix[0][i] * this->cofactor(0, i);
             }
 
             return det;
@@ -389,11 +391,11 @@ class Matrix {
 
             int row1 = 0;
             int col1 = 0;
-            for (int i=0; i<mRows; i++) {
+            for (int i=0; i<this->mRows; i++) {
                 if (i != row) {
-                    for (int j=0; j<mCols; j++) {
+                    for (int j=0; j<this->mCols; j++) {
                         if (j != col) {
-                            a.setCell(row1, col1, _matrix[i][j]);
+                            a.setCell(row1, col1, this->_matrix[i][j]);
                             col1++;
                         }
                     }
@@ -406,11 +408,11 @@ class Matrix {
         }
 
         float minor(int row, int col) {
-            return submatrix(row, col).determinant();
+            return this->submatrix(row, col).determinant();
         }
 
         float cofactor(int row, int col) {
-            float minor = submatrix(row, col).determinant();
+            float minor = this->submatrix(row, col).determinant();
 
             if ((row + col) % 2 != 0) {
                 minor = minor * -1;
