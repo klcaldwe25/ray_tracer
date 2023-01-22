@@ -108,7 +108,7 @@ class Matrix {
             p._matrix[0][0] = x;
             p._matrix[1][0] = y;
             p._matrix[2][0] = z;
-            p._matrix[3][1] = 1;
+            p._matrix[3][0] = 0;
 
             return p;
         }
@@ -169,26 +169,20 @@ class Matrix {
         } 
 
         float magnitude() {
-            Matrix a = *this;
-
             return std::sqrt( 
-                std::pow(a._matrix[0][0], 2.0) + 
-                std::pow(a._matrix[1][0], 2.0) + 
-                std::pow(a._matrix[2][0], 2.0) 
+                std::pow(this->getCell(0,0), 2.0) + 
+                std::pow(this->getCell(1,0), 2.0) + 
+                std::pow(this->getCell(2,0), 2.0) 
             );
         }
 
         Matrix normalize() {
-            Matrix a = *this;
+            float magnitude = this->magnitude();
 
-            float magnitude = a.magnitude();
+            return Matrix(4,1).vectorMatrix(this->getCell(0,0) / magnitude, 
+                                            this->getCell(1,0) / magnitude, 
+                                            this->getCell(2,0) / magnitude);
             
-            a._matrix[0][0] /= magnitude;
-            a._matrix[1][0] /= magnitude;
-            a._matrix[2][0] /= magnitude;
-            a._matrix[3][0] /= magnitude;
-
-            return a;            
         }
 
         float dot(Matrix b) {
@@ -211,6 +205,11 @@ class Matrix {
             a._matrix[3][0] = 0;
 
             return a;
+        }
+
+        Matrix reflect(Matrix normal) {
+            Matrix in = *this;
+            return in.subtract(normal.multiplyScalar(2).multiplyScalar(in.dot(normal)));
         }
 
         // IDENTITY
@@ -419,7 +418,8 @@ class Matrix {
             }
 
             return minor;
-        }     
+        }
+     
 };
 
 #endif

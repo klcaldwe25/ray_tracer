@@ -1430,7 +1430,10 @@ tst/CMakeFiles/ray_tracer_tst.dir/Intersection-test.cpp.o: /Users/kylecaldwell/r
   /Users/kylecaldwell/ray_tracer/src/Matrix.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/Scene.h \
+  /Users/kylecaldwell/ray_tracer/src/Color.h \
+  /Users/kylecaldwell/ray_tracer/src/Tuple.h
 
 tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Intersections-test.cpp \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest.h \
@@ -1908,6 +1911,9 @@ tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.o: /Users/kylecaldwell/
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/Scene.h \
+  /Users/kylecaldwell/ray_tracer/src/Color.h \
+  /Users/kylecaldwell/ray_tracer/src/Tuple.h \
   /Users/kylecaldwell/ray_tracer/src/Intersection.h \
   /Users/kylecaldwell/ray_tracer/src/Intersections.h
 
@@ -3338,7 +3344,10 @@ tst/CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.o: /Users/kylecaldwell/ray_trac
   /Users/kylecaldwell/ray_tracer/src/Matrix.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/Scene.h \
+  /Users/kylecaldwell/ray_tracer/src/Color.h \
+  /Users/kylecaldwell/ray_tracer/src/Tuple.h
 
 tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o: /Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp \
   /Users/kylecaldwell/ray_tracer/googletest/googletest/include/gtest/gtest.h \
@@ -4292,6 +4301,8 @@ tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/tst
 /Users/kylecaldwell/ray_tracer/tst/Shape-test.cpp:
 
 /Users/kylecaldwell/ray_tracer/tst/Intersections-test.cpp:
+
+/Users/kylecaldwell/ray_tracer/src/Scene.h:
 
 /Users/kylecaldwell/ray_tracer/src/Matrix.h:
 

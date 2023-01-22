@@ -475,5 +475,8 @@ tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/Scene.h \
+  /Users/kylecaldwell/ray_tracer/src/Color.h \
+  /Users/kylecaldwell/ray_tracer/src/Tuple.h \
   /Users/kylecaldwell/ray_tracer/src/Intersection.h \
   /Users/kylecaldwell/ray_tracer/src/Intersections.h

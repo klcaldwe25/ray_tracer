@@ -436,11 +436,14 @@ src/CMakeFiles/ray_tracer_lib.dir/main.cpp.o: /Users/kylecaldwell/ray_tracer/src
   /Users/kylecaldwell/ray_tracer/src/Circle.h \
   /Users/kylecaldwell/ray_tracer/src/Shape.h \
   /Users/kylecaldwell/ray_tracer/src/Ray.h \
+  /Users/kylecaldwell/ray_tracer/src/Scene.h \
   /Users/kylecaldwell/ray_tracer/src/Intersections.h \
   /Users/kylecaldwell/ray_tracer/src/Intersection.h
 
 
 /Users/kylecaldwell/ray_tracer/src/Intersection.h:
+
+/Users/kylecaldwell/ray_tracer/src/Scene.h:
 
 /Users/kylecaldwell/ray_tracer/src/Ray.h:
 

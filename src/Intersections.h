@@ -22,7 +22,7 @@ class Intersections {
 
         Intersection hit() {
 
-            Intersection intersection = Intersection(std::numeric_limits<float>::max(), Shape());
+            Intersection intersection = Intersection(std::numeric_limits<float>::max(), Sphere());
 
             for (auto i : this->mIntersections) {
                 if (i.getT() > 0 && i.getT() < intersection.getT()) {
@@ -33,7 +33,7 @@ class Intersections {
             return intersection;
         }
 
-        Intersections intersectSphere(Ray r, Shape s) {
+        Intersections intersectSphere(Ray r, Sphere s) {
             Intersections intersections = Intersections();
 
             Ray r2 = r.transform(s.getTransform().inverse());
