@@ -91,81 +91,81 @@ class Matrix {
 
         // POINT
         Matrix pointMatrix(float x, float y, float z) {
-            Matrix p = *this;
+            Matrix self = *this;
 
-            p._matrix[0][0] = x;
-            p._matrix[1][0] = y;
-            p._matrix[2][0] = z;
-            p._matrix[3][0] = 1;
+            self._matrix[0][0] = x;
+            self._matrix[1][0] = y;
+            self._matrix[2][0] = z;
+            self._matrix[3][0] = 1;
 
-            return p;
+            return self;
         }
 
         // VECTOR
         Matrix vectorMatrix(float x, float y, float z) {
-            Matrix p = *this;
+            Matrix self = *this;
 
-            p._matrix[0][0] = x;
-            p._matrix[1][0] = y;
-            p._matrix[2][0] = z;
-            p._matrix[3][0] = 0;
+            self._matrix[0][0] = x;
+            self._matrix[1][0] = y;
+            self._matrix[2][0] = z;
+            self._matrix[3][0] = 0;
 
-            return p;
+            return self;
         }
 
         Matrix add(Matrix b) {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] += b.getCell(0, 0);
-            a._matrix[1][0] += b.getCell(1, 0);
-            a._matrix[2][0] += b.getCell(2, 0);
-            a._matrix[3][0] += b.getCell(3, 0);
+            self._matrix[0][0] += b.getCell(0, 0);
+            self._matrix[1][0] += b.getCell(1, 0);
+            self._matrix[2][0] += b.getCell(2, 0);
+            self._matrix[3][0] += b.getCell(3, 0);
 
-            return a;
+            return self;
         }
 
         Matrix subtract(Matrix b) {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] -= b.getCell(0, 0);
-            a._matrix[1][0] -= b.getCell(1, 0);
-            a._matrix[2][0] -= b.getCell(2, 0);
-            a._matrix[3][0] -= b.getCell(3, 0);
+            self._matrix[0][0] -= b.getCell(0, 0);
+            self._matrix[1][0] -= b.getCell(1, 0);
+            self._matrix[2][0] -= b.getCell(2, 0);
+            self._matrix[3][0] -= b.getCell(3, 0);
 
-            return a;
+            return self;
         }    
 
         Matrix negate() {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] = 0 - a.getCell(0, 0);
-            a._matrix[1][0] = 0 - a.getCell(1, 0);
-            a._matrix[2][0] = 0 - a.getCell(2, 0);
-            a._matrix[3][0] = 0 - a.getCell(3, 0);
+            self._matrix[0][0] = 0 - self.getCell(0, 0);
+            self._matrix[1][0] = 0 - self.getCell(1, 0);
+            self._matrix[2][0] = 0 - self.getCell(2, 0);
+            self._matrix[3][0] = 0 - self.getCell(3, 0);
 
-            return a;
+            return self;
         }   
 
         Matrix multiplyScalar(float b) {
-            Matrix a = *this;
+            Matrix self = *this;
             
-            a._matrix[0][0] *= b;
-            a._matrix[1][0] *= b;
-            a._matrix[2][0] *= b;
-            a._matrix[3][0] *= b;
+            self._matrix[0][0] *= b;
+            self._matrix[1][0] *= b;
+            self._matrix[2][0] *= b;
+            self._matrix[3][0] *= b;
 
-            return a;
+            return self;
         }          
 
         Matrix divideScalar(float b) {
-            Matrix a = *this;
+            Matrix self = *this;
             
-            a._matrix[0][0] /= b;
-            a._matrix[1][0] /= b;
-            a._matrix[2][0] /= b;
-            a._matrix[3][0] /= b;
+            self._matrix[0][0] /= b;
+            self._matrix[1][0] /= b;
+            self._matrix[2][0] /= b;
+            self._matrix[3][0] /= b;
 
-            return a;
+            return self;
         } 
 
         float magnitude() {
@@ -186,57 +186,57 @@ class Matrix {
         }
 
         float dot(Matrix b) {
-            Matrix a = *this;
+            Matrix self = *this;
 
             return ( 
-                (a._matrix[0][0] * b.getCell(0,0)) +
-                (a._matrix[1][0] * b.getCell(1,0)) +
-                (a._matrix[2][0] * b.getCell(2,0)) +
-                (a._matrix[3][0] * b.getCell(3,0))
+                (self._matrix[0][0] * b.getCell(0,0)) +
+                (self._matrix[1][0] * b.getCell(1,0)) +
+                (self._matrix[2][0] * b.getCell(2,0)) +
+                (self._matrix[3][0] * b.getCell(3,0))
             );             
         }
 
         Matrix cross(Matrix b) {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] = ((a._matrix[1][0] * b.getCell(2,0)) - (a._matrix[2][0] * b.getCell(1,0)));
-            a._matrix[1][0] = ((a._matrix[2][0] * b.getCell(0,0)) - (a._matrix[0][0] * b.getCell(2,0)));
-            a._matrix[2][0] = ((a._matrix[0][0] * b.getCell(1,0)) - (a._matrix[1][0] * b.getCell(0,0)));
-            a._matrix[3][0] = 0;
+            self._matrix[0][0] = ((self._matrix[1][0] * b.getCell(2,0)) - (self._matrix[2][0] * b.getCell(1,0)));
+            self._matrix[1][0] = ((self._matrix[2][0] * b.getCell(0,0)) - (self._matrix[0][0] * b.getCell(2,0)));
+            self._matrix[2][0] = ((self._matrix[0][0] * b.getCell(1,0)) - (self._matrix[1][0] * b.getCell(0,0)));
+            self._matrix[3][0] = 0;
 
-            return a;
+            return self;
         }
 
         Matrix reflect(Matrix normal) {
-            Matrix in = *this;
-            return in.subtract(normal.multiplyScalar(2).multiplyScalar(in.dot(normal)));
+            Matrix self = *this;
+            return self.subtract(normal.multiplyScalar(2).multiplyScalar(self.dot(normal)));
         }
 
         // IDENTITY
         Matrix identityMatrix() {
-            Matrix p = *this;
+            Matrix self = *this;
 
-            p._matrix[0][0] = 1;
-            p._matrix[1][1] = 1;
-            p._matrix[2][2] = 1;
-            p._matrix[3][3] = 1;
+            self._matrix[0][0] = 1;
+            self._matrix[1][1] = 1;
+            self._matrix[2][2] = 1;
+            self._matrix[3][3] = 1;
 
-            return p;
+            return self;
         }
 
         // TRANSLATE
         Matrix translationMatrix(float x, float y, float z) {
-            Matrix p = *this;
+            Matrix self = *this;
 
-            p._matrix[0][0] = 1;
-            p._matrix[1][1] = 1;
-            p._matrix[2][2] = 1;
-            p._matrix[3][3] = 1;
-            p._matrix[0][3] = x;
-            p._matrix[1][3] = y;
-            p._matrix[2][3] = z;
+            self._matrix[0][0] = 1;
+            self._matrix[1][1] = 1;
+            self._matrix[2][2] = 1;
+            self._matrix[3][3] = 1;
+            self._matrix[0][3] = x;
+            self._matrix[1][3] = y;
+            self._matrix[2][3] = z;
 
-            return p;
+            return self;
         }
 
         Matrix translate(float x, float y, float z) {
@@ -245,14 +245,14 @@ class Matrix {
 
         // SCALE
         Matrix scalingMatrix(float x, float y, float z) {
-            Matrix p = *this;
+            Matrix self = *this;
 
-            p._matrix[0][0] = x;
-            p._matrix[1][1] = y;
-            p._matrix[2][2] = z;
-            p._matrix[3][3] = 1;
+            self._matrix[0][0] = x;
+            self._matrix[1][1] = y;
+            self._matrix[2][2] = z;
+            self._matrix[3][3] = 1;
 
-            return p;           
+            return self;           
         }
 
         Matrix scale (float x, float y, float z) {
@@ -261,42 +261,42 @@ class Matrix {
 
         // ROTATE        
         Matrix x_rotation(float r) {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] = 1;
-            a._matrix[1][1] = cos(r);
-            a._matrix[1][2] = -( sin(r) );
-            a._matrix[2][1] = sin(r);
-            a._matrix[2][2] = cos(r);
-            a._matrix[3][3] = 1;
+            self._matrix[0][0] = 1;
+            self._matrix[1][1] = cos(r);
+            self._matrix[1][2] = -( sin(r) );
+            self._matrix[2][1] = sin(r);
+            self._matrix[2][2] = cos(r);
+            self._matrix[3][3] = 1;
 
-            return a;
+            return self;
         }
 
         Matrix y_rotation(float r) {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] = cos(r);
-            a._matrix[1][1] = 1;
-            a._matrix[0][2] = sin(r);
-            a._matrix[2][0] = -( sin(r) );
-            a._matrix[2][2] = cos(r);
-            a._matrix[3][3] = 1;
+            self._matrix[0][0] = cos(r);
+            self._matrix[1][1] = 1;
+            self._matrix[0][2] = sin(r);
+            self._matrix[2][0] = -( sin(r) );
+            self._matrix[2][2] = cos(r);
+            self._matrix[3][3] = 1;
 
-            return a;
+            return self;
         } 
 
         Matrix z_rotation(float r) {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] = cos(r);
-            a._matrix[0][1] = -( sin(r) );
-            a._matrix[1][0] = sin(r) ;
-            a._matrix[1][1] = cos(r);
-            a._matrix[2][2] = 1;
-            a._matrix[3][3] = 1;
+            self._matrix[0][0] = cos(r);
+            self._matrix[0][1] = -( sin(r) );
+            self._matrix[1][0] = sin(r) ;
+            self._matrix[1][1] = cos(r);
+            self._matrix[2][2] = 1;
+            self._matrix[3][3] = 1;
 
-            return a;
+            return self;
         } 
 
         Matrix x_rotate(float rad) {
@@ -313,20 +313,20 @@ class Matrix {
 
         // SHEARING
         Matrix shearingMatrix(float xY, float xZ, float yX, float yZ, float zX, float zY) {
-            Matrix a = *this;
+            Matrix self = *this;
 
-            a._matrix[0][0] = 1;
-            a._matrix[0][1] = xY;
-            a._matrix[0][2] = xZ;
-            a._matrix[1][0] = yX;
-            a._matrix[1][1] = 1;
-            a._matrix[1][2] = yZ;
-            a._matrix[2][0] = zX;
-            a._matrix[2][1] = zY;
-            a._matrix[2][2] = 1;
-            a._matrix[3][3] = 1;   
+            self._matrix[0][0] = 1;
+            self._matrix[0][1] = xY;
+            self._matrix[0][2] = xZ;
+            self._matrix[1][0] = yX;
+            self._matrix[1][1] = 1;
+            self._matrix[1][2] = yZ;
+            self._matrix[2][0] = zX;
+            self._matrix[2][1] = zY;
+            self._matrix[2][2] = 1;
+            self._matrix[3][3] = 1;   
 
-            return a;        
+            return self;        
         }      
 
         // TRANSPOSE
@@ -344,23 +344,23 @@ class Matrix {
 
         // INVERSE ACTIONS
         Matrix inverse() {
-            Matrix a = *this;     
+            Matrix self = *this;     
 
-            if (!a.invertible()) {
+            if (!self.invertible()) {
                 throw std::invalid_argument("Not invertible");
             }
 
-            float det = a.determinant();
+            float det = self.determinant();
             float c = 0;
 
-            for (int i=0; i<a.mRows; i++) {
-                for (int j=0; j<a.mCols; j++) {
+            for (int i=0; i<self.mRows; i++) {
+                for (int j=0; j<self.mCols; j++) {
                     c = cofactor(i, j);
-                    a.setCell(j, i, (c/det) );
+                    self.setCell(j, i, (c/det) );
                 }
             }
 
-            return a;
+            return self;
         }
 
         bool invertible() {

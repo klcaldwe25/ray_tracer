@@ -319,6 +319,30 @@ Ray-test.cpp.s:
 	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.s
 .PHONY : Ray-test.cpp.s
 
+Scene-test.o: Scene-test.cpp.o
+.PHONY : Scene-test.o
+
+# target to build an object file
+Scene-test.cpp.o:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Scene-test.cpp.o
+.PHONY : Scene-test.cpp.o
+
+Scene-test.i: Scene-test.cpp.i
+.PHONY : Scene-test.i
+
+# target to preprocess a source file
+Scene-test.cpp.i:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Scene-test.cpp.i
+.PHONY : Scene-test.cpp.i
+
+Scene-test.s: Scene-test.cpp.s
+.PHONY : Scene-test.s
+
+# target to generate assembly for a file
+Scene-test.cpp.s:
+	cd /Users/kylecaldwell/ray_tracer/build && $(MAKE) $(MAKESILENT) -f tst/CMakeFiles/ray_tracer_tst.dir/build.make tst/CMakeFiles/ray_tracer_tst.dir/Scene-test.cpp.s
+.PHONY : Scene-test.cpp.s
+
 Shape-test.o: Shape-test.cpp.o
 .PHONY : Shape-test.o
 
@@ -422,6 +446,9 @@ help:
 	@echo "... Ray-test.o"
 	@echo "... Ray-test.i"
 	@echo "... Ray-test.s"
+	@echo "... Scene-test.o"
+	@echo "... Scene-test.i"
+	@echo "... Scene-test.s"
 	@echo "... Shape-test.o"
 	@echo "... Shape-test.i"
 	@echo "... Shape-test.s"

@@ -9,7 +9,6 @@
 
 TEST (IntersectionsTest, intersectOne) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));
-//    Shape s = Shape().sphereShape();
 
     Sphere s = Sphere();
 
@@ -23,7 +22,6 @@ TEST (IntersectionsTest, intersectOne) {
 
 TEST (IntersectionsTest, intersectTwo) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,1,-5), Matrix(4,1).vectorMatrix(0,0,1));
-//    Shape s = Shape().sphereShape();
 
     Sphere s = Sphere();
 
@@ -36,7 +34,6 @@ TEST (IntersectionsTest, intersectTwo) {
 
 TEST (IntersectionsTest, intersectThree) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,2,-5), Matrix(4,1).vectorMatrix(0,0,1));    
-//    Shape s = Shape().sphereShape();
 
     Sphere s = Sphere();
 
@@ -47,7 +44,6 @@ TEST (IntersectionsTest, intersectThree) {
 
 TEST (IntersectionsTest, intersectFour) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,0), Matrix(4,1).vectorMatrix(0,0,1));    
-//    Shape s = Shape().sphereShape();
 
     Sphere s = Sphere();
 
@@ -60,7 +56,6 @@ TEST (IntersectionsTest, intersectFour) {
 
 TEST (IntersectionsTest, intersectFive) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,5), Matrix(4,1).vectorMatrix(0,0,1));    
-//    Shape s = Shape().sphereShape();
 
     Sphere s = Sphere();
 
@@ -72,8 +67,6 @@ TEST (IntersectionsTest, intersectFive) {
 }
 
 TEST (IntersectionsTest, intersectSix) {
-//    Shape s = Shape().sphereShape();
-
     Sphere s = Sphere();
 
     Intersections intersections = Intersections();
@@ -86,8 +79,6 @@ TEST (IntersectionsTest, intersectSix) {
 }
 
 TEST (IntersectionsTest, intersectSeven) {
-//    Shape s = Shape().sphereShape();
-
     Sphere s = Sphere();
 
     Intersections xs = Intersections();
@@ -100,8 +91,6 @@ TEST (IntersectionsTest, intersectSeven) {
 }
 
 TEST (IntersectionsTest, intersectEight) {
-//    Shape s = Shape().sphereShape();
-
     Sphere s = Sphere();
 
     Intersections xs = Intersections();
@@ -114,8 +103,6 @@ TEST (IntersectionsTest, intersectEight) {
 }
 
 TEST (IntersectionsTest, intersectNine) {
-//    Shape s = Shape().sphereShape();
-
     Sphere s = Sphere();
 
     Intersections xs = Intersections();
@@ -128,8 +115,6 @@ TEST (IntersectionsTest, intersectNine) {
 }
 
 TEST (IntersectionsTest, intersectTen) {
-//    Shape s = Shape().sphereShape();
-
     Sphere s = Sphere();
 
     Intersections xs = Intersections();
@@ -145,7 +130,6 @@ TEST (IntersectionsTest, intersectTen) {
 
 TEST (IntersectionsTest, intersectEleven) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));    
-//    Shape s = Shape().sphereShape();
 
     Sphere s = Sphere();
 
@@ -160,7 +144,6 @@ TEST (IntersectionsTest, intersectEleven) {
 
 TEST (IntersectionsTest, intersectTwelve) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));    
-//    Shape s = Shape().sphereShape();
 
     Sphere s = Sphere();
 

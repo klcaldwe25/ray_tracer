@@ -15,13 +15,6 @@ class Shape {
     public:
         Shape(){}
 
-/*
-        Shape sphereShape() {
-            Shape a = *this;
-            a.mOrigin = Matrix(4,1).pointMatrix(0, 0, 0);
-            return a;
-        }
-*/
         void setOrigin(Matrix origin) {
             mOrigin = origin;
         }

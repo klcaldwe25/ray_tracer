@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/kylecaldwell/ray_tracer/tst/Intersections-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Intersections-test.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/tst/Matrix-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Matrix-test.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/tst/Ray-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Ray-test.cpp.o.d"
+  "/Users/kylecaldwell/ray_tracer/tst/Scene-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Scene-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Scene-test.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/tst/Shape-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/tst/Tuple-test.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/Tuple-test.cpp.o.d"
   "/Users/kylecaldwell/ray_tracer/tst/main.cpp" "tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o" "gcc" "tst/CMakeFiles/ray_tracer_tst.dir/main.cpp.o.d"
