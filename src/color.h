@@ -32,7 +32,7 @@ class Color {
 
         bool equal(float a, float b) {
 
-            float EPSILON = 0.00001;
+            float EPSILON = 0.000999;
 
             if (std::abs(a - b) < EPSILON) {
                 return true;
@@ -41,37 +41,52 @@ class Color {
             }
         }
 
-        Color add(Color a, Color b) {
-            return Color ( 
-                (a.getRed() + b.getRed()), 
-                (a.getGreen() + b.getGreen()),
-                (a.getBlue() + b.getBlue())
-            );
+        bool isEqual(Color other) {       
+            Color self = *this;
+            if ( equal(self.getBlue(), other.getBlue()) == false ) {
+                return false;
+            } else if ( equal(self.getGreen(), other.getGreen()) == false ) {
+                return false;
+            } else if ( equal(self.getRed(), other.getRed()) == false ) {
+                return false;
+            } else {
+                return true;
+            }
         }
 
-        Color subtract(Color a, Color b) {
-            return Color ( 
-                (a.getRed() - b.getRed()), 
-                (a.getGreen() - b.getGreen()),
-                (a.getBlue() - b.getBlue())
-            );
+        Color add(Color other) {
+            Color self = *this;
+            self.mRed += other.getRed();
+            self.mGreen += other.getGreen();
+            self.mBlue += other.getBlue();
+            return self;
+        }
+
+        Color subtract(Color other) {
+            Color self = *this;
+            self.mRed -= other.getRed();
+            self.mGreen -= other.getGreen();
+            self.mBlue -= other.getBlue();
+            return self;            
         } 
 
-        Color multiply(Color a, float b) {
-            return Color ( 
-                (a.getRed() * b), 
-                (a.getGreen() * b),
-                (a.getBlue() * b)
-            );
+        Color multiplyScalar(float b) {
+            Color self = *this;
+            self.mBlue *= b;
+            self.mGreen *= b;
+            self.mRed *= b;
+
+            return self;
         }
 
-        Color hadamard_product (Color a, Color b) {
-            return Color ( 
-                (a.getRed() * b.getRed()), 
-                (a.getGreen() * b.getGreen()),
-                (a.getBlue() * b.getBlue())
-            );            
-        }           
+        Color multiplyColors(Color other) {
+            Color self = *this;
+            self.mBlue *= other.getBlue();
+            self.mGreen *= other.getGreen();
+            self.mRed *= other.getRed();
+
+            return self;
+        }        
 };
 
 #endif

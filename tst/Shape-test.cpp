@@ -1,9 +1,10 @@
 #include "gtest/gtest.h"
 #include "Shape.h"
 #include "Matrix.h"
+#include "Scene.h"
 
 TEST (ShapeTest, testOne) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     Matrix m1 = Matrix(4,4).identityMatrix();
 
@@ -11,7 +12,7 @@ TEST (ShapeTest, testOne) {
 }
 
 TEST (ShapeTest, testTwo) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     Matrix t = Matrix(4,4).translationMatrix(2, 3, 4);
 
@@ -21,7 +22,7 @@ TEST (ShapeTest, testTwo) {
 }
 
 TEST (ShapeTest, testThree) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     Matrix n = s.normal_at(Matrix(4,1).pointMatrix(1,0,0));
 
@@ -31,7 +32,7 @@ TEST (ShapeTest, testThree) {
 }
 
 TEST (ShapeTest, testFour) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     Matrix n = s.normal_at(Matrix(4,1).pointMatrix(0,1,0));
 
@@ -41,7 +42,7 @@ TEST (ShapeTest, testFour) {
 }
 
 TEST (ShapeTest, testFive) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     Matrix n = s.normal_at(Matrix(4,1).pointMatrix(0,0,1));
 
@@ -51,7 +52,7 @@ TEST (ShapeTest, testFive) {
 }
 
 TEST (ShapeTest, testSix) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     float val = std::sqrt(3)/3;
 
@@ -63,7 +64,7 @@ TEST (ShapeTest, testSix) {
 }
 
 TEST (ShapeTest, testSeven) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     float val = std::sqrt(3)/3;
 
@@ -73,7 +74,8 @@ TEST (ShapeTest, testSeven) {
 }
 
 TEST (ShapeTest, testEight) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
+
     s.setTransform(Matrix(4,4).translationMatrix(0,1,0));
 
     Matrix n = s.normal_at(Matrix(4,1).pointMatrix(0, 1.70711, -0.70711));
@@ -84,7 +86,7 @@ TEST (ShapeTest, testEight) {
 }
 
 TEST (ShapeTest, testNine) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
 
     Matrix m = Matrix(4,4).scalingMatrix(1, 0.5, 1).multiply(Matrix(4,4).z_rotation(M_PI/5));
 
@@ -97,5 +99,4 @@ TEST (ShapeTest, testNine) {
     Matrix v = Matrix(4,1).vectorMatrix(0, 0.97014, -0.24254);
 
     EXPECT_TRUE(n.isEqual(v));
- 
 }

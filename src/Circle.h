@@ -22,7 +22,7 @@ class Circle {
 
         Canvas canvas = Canvas(canvas_pixels, canvas_pixels, Color(1,1,1));
         Color color = Color(1, 0, 0);
-        Shape sphere = Shape().sphereShape();
+        Sphere sphere = Sphere();
 
     public:
 

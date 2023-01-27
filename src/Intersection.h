@@ -6,12 +6,12 @@
 class Intersection {
     protected:
         float mT;
-        Shape mObject;
+        Sphere mObject;
 
     public:
         Intersection(){}
 
-        Intersection(float t, Shape object) {
+        Intersection(float t, Sphere object) {
             mT = t;
             mObject = object;
         }
@@ -24,7 +24,7 @@ class Intersection {
             return mT;
         }
 
-        Shape getObject() {
+        Sphere getObject() {
             return mObject;
         }
 

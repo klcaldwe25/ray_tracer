@@ -790,3 +790,19 @@ TEST (MatrixTest, chainingTwo) {
 
     EXPECT_TRUE( p2.isEqual( T.multiply(p1) ) );
 }
+
+TEST (MatrixTest, reflectOne) {
+    Matrix v = Matrix(4,1).vectorMatrix(1, -1, 0);
+    Matrix n = Matrix(4,1).vectorMatrix(0, 1, 0);
+    Matrix a = Matrix(4,1).vectorMatrix(1, 1, 0);
+
+    EXPECT_TRUE(a.isEqual(v.reflect(n)));
+}
+
+TEST (MatrixTest, reflectTwo) {
+    Matrix v = Matrix(4,1).vectorMatrix(0, -1, 0);
+    Matrix n = Matrix(4,1).vectorMatrix(sqrt(2)/2, sqrt(2)/2, 0);
+    Matrix a = Matrix(4,1).vectorMatrix(1, 0, 0);
+
+    EXPECT_TRUE(a.isEqual(v.reflect(n)));
+}

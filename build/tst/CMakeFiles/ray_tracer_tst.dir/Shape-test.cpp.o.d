@@ -474,4 +474,7 @@ tst/CMakeFiles/ray_tracer_tst.dir/Shape-test.cpp.o: \
   /Users/kylecaldwell/ray_tracer/src/Matrix.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/cmath \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/c++/v1/math.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h
+  /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk/usr/include/math.h \
+  /Users/kylecaldwell/ray_tracer/src/Scene.h \
+  /Users/kylecaldwell/ray_tracer/src/Color.h \
+  /Users/kylecaldwell/ray_tracer/src/Tuple.h

@@ -9,18 +9,21 @@
 
 TEST (IntersectionsTest, intersectOne) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));
-    Shape s = Shape().sphereShape();
+
+    Sphere s = Sphere();
 
     Intersections xs = Intersections().intersectSphere(r, s);
 
     EXPECT_EQ(xs.getIntersections().size(), 2);
     EXPECT_EQ(xs.getIntersections()[0].getT(), 4.0);
     EXPECT_EQ(xs.getIntersections()[1].getT(), 6.0);
+
 }
 
 TEST (IntersectionsTest, intersectTwo) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,1,-5), Matrix(4,1).vectorMatrix(0,0,1));
-    Shape s = Shape().sphereShape();
+
+    Sphere s = Sphere();
 
     Intersections xs = Intersections().intersectSphere(r, s);
     
@@ -31,7 +34,8 @@ TEST (IntersectionsTest, intersectTwo) {
 
 TEST (IntersectionsTest, intersectThree) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,2,-5), Matrix(4,1).vectorMatrix(0,0,1));    
-    Shape s = Shape().sphereShape();
+
+    Sphere s = Sphere();
 
     Intersections xs = Intersections().intersectSphere(r, s);
 
@@ -40,7 +44,8 @@ TEST (IntersectionsTest, intersectThree) {
 
 TEST (IntersectionsTest, intersectFour) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,0), Matrix(4,1).vectorMatrix(0,0,1));    
-    Shape s = Shape().sphereShape();
+
+    Sphere s = Sphere();
 
     Intersections xs = Intersections().intersectSphere(r, s);
 
@@ -51,7 +56,8 @@ TEST (IntersectionsTest, intersectFour) {
 
 TEST (IntersectionsTest, intersectFive) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,5), Matrix(4,1).vectorMatrix(0,0,1));    
-    Shape s = Shape().sphereShape();
+
+    Sphere s = Sphere();
 
     Intersections xs = Intersections().intersectSphere(r, s);
 
@@ -61,7 +67,8 @@ TEST (IntersectionsTest, intersectFive) {
 }
 
 TEST (IntersectionsTest, intersectSix) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
+
     Intersections intersections = Intersections();
     intersections.setIntersections(Intersection(1, s));
     intersections.setIntersections(Intersection(2, s));
@@ -72,7 +79,8 @@ TEST (IntersectionsTest, intersectSix) {
 }
 
 TEST (IntersectionsTest, intersectSeven) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
+
     Intersections xs = Intersections();
     xs.setIntersections(Intersection(1, s));
     xs.setIntersections(Intersection(2, s));
@@ -83,7 +91,8 @@ TEST (IntersectionsTest, intersectSeven) {
 }
 
 TEST (IntersectionsTest, intersectEight) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
+
     Intersections xs = Intersections();
     xs.setIntersections(Intersection(-1, s));
     xs.setIntersections(Intersection(1, s));
@@ -94,7 +103,8 @@ TEST (IntersectionsTest, intersectEight) {
 }
 
 TEST (IntersectionsTest, intersectNine) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
+
     Intersections xs = Intersections();
     xs.setIntersections(Intersection(-2, s));
     xs.setIntersections(Intersection(-1, s));
@@ -105,7 +115,8 @@ TEST (IntersectionsTest, intersectNine) {
 }
 
 TEST (IntersectionsTest, intersectTen) {
-    Shape s = Shape().sphereShape();
+    Sphere s = Sphere();
+
     Intersections xs = Intersections();
     xs.setIntersections(Intersection(5, s));
     xs.setIntersections(Intersection(7, s));
@@ -119,7 +130,9 @@ TEST (IntersectionsTest, intersectTen) {
 
 TEST (IntersectionsTest, intersectEleven) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));    
-    Shape s = Shape().sphereShape();
+
+    Sphere s = Sphere();
+
     s.setTransform(Matrix(4,4).scalingMatrix(2,2,2));
 
     Intersections xs = Intersections().intersectSphere(r, s);
@@ -131,7 +144,9 @@ TEST (IntersectionsTest, intersectEleven) {
 
 TEST (IntersectionsTest, intersectTwelve) {
     Ray r = Ray(Matrix(4,1).pointMatrix(0,0,-5), Matrix(4,1).vectorMatrix(0,0,1));    
-    Shape s = Shape().sphereShape();
+
+    Sphere s = Sphere();
+
     s.setTransform(Matrix(4,4).translationMatrix(5,0,0));
 
     Intersections xs = Intersections().intersectSphere(r, s);
