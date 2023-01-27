@@ -1,5 +1,4 @@
 #include "Tuple.h"
-#include <iostream>
 
 #ifndef RAY_TRACER_COLOR_H
 #define RAY_TRACER_COLOR_H
@@ -55,39 +54,21 @@ class Color {
             }
         }
 
-        Color add(Color a, Color b) {
-            return Color ( 
-                (a.getRed() + b.getRed()), 
-                (a.getGreen() + b.getGreen()),
-                (a.getBlue() + b.getBlue())
-            );
-        }
-
-        Color addColors(Color other) {
+        Color add(Color other) {
             Color self = *this;
-
-            self.mBlue += other.getBlue();
-            self.mGreen += other.getGreen();
             self.mRed += other.getRed();
-
+            self.mGreen += other.getGreen();
+            self.mBlue += other.getBlue();
             return self;
         }
 
-        Color subtract(Color a, Color b) {
-            return Color ( 
-                (a.getRed() - b.getRed()), 
-                (a.getGreen() - b.getGreen()),
-                (a.getBlue() - b.getBlue())
-            );
+        Color subtract(Color other) {
+            Color self = *this;
+            self.mRed -= other.getRed();
+            self.mGreen -= other.getGreen();
+            self.mBlue -= other.getBlue();
+            return self;            
         } 
-
-        Color multiply(Color a, float b) {
-            return Color ( 
-                (a.getRed() * b), 
-                (a.getGreen() * b),
-                (a.getBlue() * b)
-            );
-        }
 
         Color multiplyScalar(float b) {
             Color self = *this;
@@ -105,15 +86,7 @@ class Color {
             self.mRed *= other.getRed();
 
             return self;
-        }
-
-        Color hadamard_product (Color a, Color b) {
-            return Color ( 
-                (a.getRed() * b.getRed()), 
-                (a.getGreen() * b.getGreen()),
-                (a.getBlue() * b.getBlue())
-            );            
-        }           
+        }        
 };
 
 #endif

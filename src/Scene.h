@@ -95,7 +95,7 @@ class Material {
                 }
             }
 
-            return ambient.addColors(diffuse).addColors(specular);
+            return ambient.add(diffuse).add(specular);
 
         }
 

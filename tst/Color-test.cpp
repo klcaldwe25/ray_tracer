@@ -4,50 +4,27 @@
 
 Color color;
 
-TEST(ColorTest, setColor) {
-    Color c = Color(-0.5, 0.4, 1.7);
-
-    EXPECT_TRUE( color.equal (c.getRed(), -0.5) );
-    EXPECT_TRUE( color.equal( c.getGreen(), 0.4) );
-    EXPECT_TRUE( color.equal( c.getBlue(), 1.7) );
+TEST(ColorTest, testOne) {
+    Color a = Color(-0.5, 0.4, 1.7);
+    EXPECT_TRUE(a.isEqual(Color(-0.5, 0.4, 1.7)));
 }
 
-TEST(ColorTest, add) {
+TEST(ColorTest, testTwo) {
     Color a = Color(0.9, 0.6, 0.75);
-    Color b = Color(0.7, 0.1, 0.25);
-    Color c = color.add(a, b);
-
-    EXPECT_TRUE( color.equal (c.getRed(), 1.6) );
-    EXPECT_TRUE( color.equal( c.getGreen(), 0.7) );
-    EXPECT_TRUE( color.equal( c.getBlue(), 1.0) );    
+    EXPECT_TRUE(a.add(Color(0.7, 0.1, 0.25)).isEqual(Color(1.6, 0.7, 1.0)));
 }
 
-TEST(ColorTest, subtract) {
+TEST(ColorTest, testThree) {
     Color a = Color(0.9, 0.6, 0.75);
-    Color b = Color(0.7, 0.1, 0.25);
-    Color c = color.subtract(a, b);
-
-    EXPECT_TRUE( color.equal (c.getRed(), 0.2) );
-    EXPECT_TRUE( color.equal( c.getGreen(), 0.5) );
-    EXPECT_TRUE( color.equal( c.getBlue(), 0.5) );    
+    EXPECT_TRUE(a.subtract(Color(0.7, 0.1, 0.25)).isEqual(Color(0.2, 0.5, 0.5)));
 }
 
-TEST(ColorTest, multiply) {
+TEST(ColorTest, testFour) {
     Color a = Color(0.2, 0.3, 0.4);
-    Color b = color.multiply(a, 2.0);
-
-    EXPECT_TRUE( color.equal (b.getRed(), 0.4) );
-    EXPECT_TRUE( color.equal( b.getGreen(), 0.6) );
-    EXPECT_TRUE( color.equal( b.getBlue(), 0.8) );        
+    EXPECT_TRUE(a.multiplyScalar(2.0).isEqual(Color(0.4, 0.6, 0.8)));    
 }
 
-TEST(ColorTest, hadamardProduct) {
+TEST(ColorTest, testFive) {
     Color a = Color(1, 0.2, 0.4);
-    Color b = Color(0.9, 1, 0.1);
-    Color c = color.hadamard_product(a, b);
-
-    EXPECT_TRUE( color.equal (c.getRed(), 0.9) );
-    EXPECT_TRUE( color.equal( c.getGreen(), 0.2) );
-    EXPECT_TRUE( color.equal( c.getBlue(), 0.04) );    
-
+    EXPECT_TRUE(a.multiplyColors(Color(0.9, 1, 0.1)).isEqual(Color(0.9, 0.2, 0.04)));  
 }
