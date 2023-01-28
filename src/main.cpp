@@ -2,9 +2,10 @@
 #include "projectile.h"
 #include "Clock.h"
 #include "Circle.h"
+#include "3DCircle.h"
 
 int main() {
-    Circle();
+    TDCircle();
 
     return 0; 
 }

@@ -50,6 +50,10 @@ class Material {
             mShininess = shininess;
         }
 
+        void setColor(Color color) {
+            mColor = color;
+        }
+
         Color getColor() {
             return mColor;
         }
